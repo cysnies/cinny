@@ -534,7 +534,7 @@ export function PublicRooms() {
                     {isSearch ? (
                       <Text size="H4">{`关于 "${serverSearchParams.term}" 的搜索结果`}</Text>
                     ) : (
-                      <Text size="H4">热门社区</Text>
+                      <Text size="H4">公开可见的频道和房间</Text>
                     )}
                     <Box gap="200">
                       {roomTypeFilters.map((filter) => (
