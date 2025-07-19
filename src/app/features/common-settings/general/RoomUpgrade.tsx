@@ -123,7 +123,7 @@ export function RoomUpgrade({ powerLevels, requestClose }: RoomUpgradeProps) {
           replacementRoom
             ? tombstoneContent.body ||
               `这个${room.isSpaceRoom() ? '频道' : '房间'}已经被替换了！`
-            : `当前房间版本：${roomVersion}.`
+            : `当前房间版本：${roomVersion}`
         }
         after={
           <Box alignItems="Center" gap="200">
