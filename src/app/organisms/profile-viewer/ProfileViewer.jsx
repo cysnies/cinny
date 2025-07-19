@@ -72,13 +72,13 @@ function ModerationTools({ roomId, userId }) {
     <div className="moderation-tools">
       {canIKick && (
         <form onSubmit={handleKick}>
-          <Input label="Kick reason" name="kick-reason" />
+          <Input label="踢出原因" name="kick-reason" />
           <Button type="submit">踢出</Button>
         </form>
       )}
       {canIBan && (
         <form onSubmit={handleBan}>
-          <Input label="Ban reason" name="ban-reason" />
+          <Input label="封禁原因" name="ban-reason" />
           <Button type="submit">封禁</Button>
         </form>
       )}

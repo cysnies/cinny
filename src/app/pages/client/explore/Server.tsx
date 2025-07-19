@@ -532,7 +532,7 @@ export function PublicRooms() {
                 <Box direction="Column" gap="400">
                   <Box direction="Column" gap="300">
                     {isSearch ? (
-                      <Text size="H4">{`Results for "${serverSearchParams.term}"`}</Text>
+                      <Text size="H4">{`关于 "${serverSearchParams.term}" 的搜索结果`}</Text>
                     ) : (
                       <Text size="H4">热门社区</Text>
                     )}
