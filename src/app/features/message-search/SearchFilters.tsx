@@ -105,7 +105,7 @@ function OrderButton({ order, onChange }: OrderButtonProps) {
         after={<Icon size="50" src={Icons.Sort} />}
         onClick={handleOpenMenu}
       >
-        {rankOrder ? <Text size="T200">Relevance</Text> : <Text size="T200">Recent</Text>}
+        {rankOrder ? <Text size="T200">相关性</Text> : <Text size="T200">最近</Text>}
       </Chip>
     </PopOut>
   );
