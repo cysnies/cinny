@@ -153,7 +153,7 @@ function AccountDataEdit({
             onClick={onCancel}
             disabled={submitting}
           >
-            <Text size="B400">Cancel</Text>
+            <Text size="B400">取消</Text>
           </Button>
         </Box>
 
