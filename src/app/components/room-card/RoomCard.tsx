@@ -224,7 +224,7 @@ export const RoomCard = as<'div', RoomCardProps>(
           </Avatar>
           {(roomType === RoomType.Space || joinedRoom?.isSpaceRoom()) && (
             <Badge variant="Secondary" fill="Soft" outlined>
-              <Text size="L400">空间</Text>
+              <Text size="L400">频道</Text>
             </Badge>
           )}
         </Box>
@@ -294,7 +294,7 @@ export const RoomCard = as<'div', RoomCardProps>(
               </Text>
             </Button>
             <ErrorDialog
-              title="Join Error"
+              title="加入错误"
               message={joinState.error.message || '加入失败。未知错误。'}
             >
               {(openError) => (

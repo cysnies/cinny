@@ -118,11 +118,11 @@ export function RoomUpgrade({ powerLevels, requestClose }: RoomUpgradeProps) {
       gap="400"
     >
       <SettingTile
-        title={room.isSpaceRoom() ? '升级空间' : '升级房间'}
+        title={room.isSpaceRoom() ? '升级频道' : '升级房间'}
         description={
           replacementRoom
             ? tombstoneContent.body ||
-              `这个${room.isSpaceRoom() ? '空间' : '房间'}已经被替换了！`
+              `这个${room.isSpaceRoom() ? '频道' : '房间'}已经被替换了！`
             : `当前房间版本：${roomVersion}.`
         }
         after={
@@ -136,7 +136,7 @@ export function RoomUpgrade({ powerLevels, requestClose }: RoomUpgradeProps) {
                 radii="300"
                 onClick={handleOpenOldRoom}
               >
-                <Text size="B300">{room.isSpaceRoom() ? '旧的空间' : '旧的房间'}</Text>
+                <Text size="B300">{room.isSpaceRoom() ? '旧的频道' : '旧的房间'}</Text>
               </Button>
             )}
             {replacementRoom ? (
@@ -147,7 +147,7 @@ export function RoomUpgrade({ powerLevels, requestClose }: RoomUpgradeProps) {
                 radii="300"
                 onClick={handleOpenRoom}
               >
-                <Text size="B300">{room.isSpaceRoom() ? '打开新的空间' : '打开新的房间'}</Text>
+                <Text size="B300">{room.isSpaceRoom() ? '打开新的频道' : '打开新的房间'}</Text>
               </Button>
             ) : (
               <Button
@@ -192,7 +192,7 @@ export function RoomUpgrade({ powerLevels, requestClose }: RoomUpgradeProps) {
                     size="500"
                   >
                     <Box grow="Yes">
-                      <Text size="H4">{room.isSpaceRoom() ? '空间升级' : '房间升级'}</Text>
+                      <Text size="H4">{room.isSpaceRoom() ? '频道升级' : '房间升级'}</Text>
                     </Box>
                     <IconButton size="300" onClick={() => setPrompt(false)} radii="300">
                       <Icon src={Icons.Cross} />
@@ -213,7 +213,7 @@ export function RoomUpgrade({ powerLevels, requestClose }: RoomUpgradeProps) {
                     </Box>
                     <Button type="submit" variant="Secondary">
                       <Text size="B400">
-                        {room.isSpaceRoom() ? '升级空间' : '升级房间'}
+                        {room.isSpaceRoom() ? '升级频道' : '升级房间'}
                       </Text>
                     </Button>
                   </Box>

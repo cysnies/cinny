@@ -214,10 +214,10 @@ export const SpaceHierarchy = forwardRef<HTMLDivElement, SpaceHierarchyProps>(
                 gap="100"
               >
                 <Text size="H5" align="Center">
-                  No Rooms
+                  没有房间
                 </Text>
                 <Text align="Center" size="T300" priority="300">
-                  This space does not contains rooms yet.
+                  这个频道中还没有任何房间。
                 </Text>
               </Box>
             </SequenceCard>

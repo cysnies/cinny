@@ -91,7 +91,7 @@ function RoomJoinButton({ roomId, via }: RoomJoinButtonProps) {
         onClick={join}
         disabled={!canJoin}
       >
-        <Text size="B300">Join</Text>
+        <Text size="B300">加入</Text>
       </Chip>
     </Box>
   );

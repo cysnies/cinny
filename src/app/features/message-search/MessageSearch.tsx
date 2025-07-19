@@ -226,8 +226,8 @@ export function MessageSearch({
           <PageHeroSection>
             <PageHero
               icon={<Icon size="600" src={Icons.Message} />}
-              title="Search Messages"
-              subTitle="Find helpful messages in your community by searching with related keywords."
+              title="消息搜索"
+              subTitle="使用关键词搜索来找到有用的信息。"
             />
           </PageHeroSection>
         </PageHeroEmpty>

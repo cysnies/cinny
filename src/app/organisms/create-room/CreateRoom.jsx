@@ -125,7 +125,7 @@ function CreateRoomContent({ isSpace, parentId, onRequestClose }) {
   const joinRuleShortText = ['私人', '内部', '公开'];
   const joinRuleText = [
     '私人（只有被邀请才能加入）',
-    '内部（空间成员可以加入）',
+    '内部（频道成员可以加入）',
     '公开（任何人都可以加入）',
   ];
   const jrRoomIC = [HashLockIC, HashIC, HashGlobeIC];
@@ -165,7 +165,7 @@ function CreateRoomContent({ isSpace, parentId, onRequestClose }) {
             </Button>
           }
           content={
-            <Text variant="b3">{`选择谁可以加入${isSpace ? '空间' : '房间'}.`}</Text>
+            <Text variant="b3">{`选择谁可以加入${isSpace ? '频道' : '房间'}.`}</Text>
           }
         />
         {joinRule === 'public' && (
@@ -220,7 +220,7 @@ function CreateRoomContent({ isSpace, parentId, onRequestClose }) {
         />
         <Input name="topic" minHeight={174} resizable label="话题（可选）" />
         <div className="create-room__name-wrapper">
-          <Input name="name" label={`${isSpace ? '空间' : '房间'}名称`} required />
+          <Input name="name" label={`${isSpace ? '频道' : '房间'}名称`} required />
           <Button
             disabled={isValidAddress === false || isCreatingRoom}
             iconSrc={isSpace ? SpacePlusIC : HashPlusIC}
@@ -288,7 +288,7 @@ function CreateRoom() {
         <Text variant="s1" weight="medium" primary>
           {parentId ? room.name : '主页'}
           <span style={{ color: 'var(--tc-surface-low)' }}>
-            {` — 新建${isSpace ? '空间' : '房间'}`}
+            {` — 新建${isSpace ? '频道' : '房间'}`}
           </span>
         </Text>
       }

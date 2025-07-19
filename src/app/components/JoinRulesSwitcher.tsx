@@ -52,8 +52,8 @@ export const useRoomJoinRuleLabel = (): JoinRuleLabels =>
     () => ({
       [JoinRule.Invite]: '仅邀请',
       [JoinRule.Knock]: '申请和邀请',
-      knock_restricted: '空间成员或申请',
-      [JoinRule.Restricted]: '空间成员',
+      knock_restricted: '频道成员或申请',
+      [JoinRule.Restricted]: '频道成员',
       [JoinRule.Public]: '公开',
       [JoinRule.Private]: '仅邀请',
     }),

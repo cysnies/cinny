@@ -341,10 +341,10 @@ function AddSpaceButton({ item }: { item: HierarchyItem }) {
               fill="None"
               onClick={handleCreateSpace}
             >
-              <Text size="T300">新建空间</Text>
+              <Text size="T300">新建频道</Text>
             </MenuItem>
             <MenuItem size="300" radii="300" fill="None" onClick={handleAddExisting}>
-              <Text size="T300">当前存在的空间</Text>
+              <Text size="T300">当前存在的频道</Text>
             </MenuItem>
           </Menu>
         </FocusTrap>
@@ -357,7 +357,7 @@ function AddSpaceButton({ item }: { item: HierarchyItem }) {
         onClick={handleAddSpace}
         aria-pressed={!!cords}
       >
-        <Text size="B300">新建空间</Text>
+        <Text size="B300">新建频道</Text>
       </Chip>
     </PopOut>
   );

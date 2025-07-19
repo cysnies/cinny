@@ -37,7 +37,7 @@ export function SidebarNav() {
             <SidebarStackSeparator />
             <SidebarStack>
               <SidebarItem>
-                <SidebarItemTooltip tooltip="新建空间">
+                <SidebarItemTooltip tooltip="新建频道">
                   {(triggerRef) => (
                     <SidebarAvatar
                       as="button"

@@ -180,21 +180,21 @@ function InviteCard({ invite, compact, onNavigate, hideAvatar }: InviteCardProps
           {invite.isEncrypted && (
             <Box shrink="No" alignItems="Center" justifyContent="Center">
               <Badge variant="Success" fill="Solid" size="400" radii="300">
-                <Text size="L400">Encrypted</Text>
+                <Text size="L400">加密会话</Text>
               </Badge>
             </Box>
           )}
           {invite.isDirect && (
             <Box shrink="No" alignItems="Center" justifyContent="Center">
               <Badge variant="Primary" fill="Solid" size="400" radii="300">
-                <Text size="L400">Direct Message</Text>
+                <Text size="L400">私聊</Text>
               </Badge>
             </Box>
           )}
           {invite.isSpace && (
             <Box shrink="No" alignItems="Center" justifyContent="Center">
               <Badge variant="Secondary" fill="Soft" size="400" radii="300">
-                <Text size="L400">Space</Text>
+                <Text size="L400">频道</Text>
               </Badge>
             </Box>
           )}
@@ -270,7 +270,7 @@ function InviteCard({ invite, compact, onNavigate, hideAvatar }: InviteCardProps
               disabled={joining || leaving}
               before={leaving ? <Spinner variant="Secondary" size="100" /> : undefined}
             >
-              <Text size="B300">Decline</Text>
+              <Text size="B300">拒绝</Text>
             </Button>
             <Button
               onClick={join}
@@ -282,7 +282,7 @@ function InviteCard({ invite, compact, onNavigate, hideAvatar }: InviteCardProps
               disabled={joining || leaving}
               before={joining ? <Spinner variant="Success" fill="Soft" size="100" /> : undefined}
             >
-              <Text size="B300">Accept</Text>
+              <Text size="B300">接受</Text>
             </Button>
           </Box>
         </Box>
@@ -290,7 +290,7 @@ function InviteCard({ invite, compact, onNavigate, hideAvatar }: InviteCardProps
       <Box gap="200" alignItems="Baseline">
         <Box grow="Yes">
           <Text size="T200" priority="300">
-            From: <b>{invite.senderId}</b>
+            来自：<b>{invite.senderId}</b>
           </Text>
         </Box>
         {invite.inviteTs && (

@@ -158,7 +158,7 @@ export function HeadingBlockButton() {
           <Menu style={{ padding: config.space.S100 }}>
             <Box gap="100">
               <TooltipProvider
-                tooltip={<BtnTooltip text="Heading 1" shortCode={`${modKey} + 1`} />}
+                tooltip={<BtnTooltip text="H1标题" shortCode={`${modKey} + 1`} />}
                 delay={500}
               >
                 {(triggerRef) => (
@@ -173,7 +173,7 @@ export function HeadingBlockButton() {
                 )}
               </TooltipProvider>
               <TooltipProvider
-                tooltip={<BtnTooltip text="Heading 2" shortCode={`${modKey} + 2`} />}
+                tooltip={<BtnTooltip text="H2标题" shortCode={`${modKey} + 2`} />}
                 delay={500}
               >
                 {(triggerRef) => (
@@ -188,7 +188,7 @@ export function HeadingBlockButton() {
                 )}
               </TooltipProvider>
               <TooltipProvider
-                tooltip={<BtnTooltip text="Heading 3" shortCode={`${modKey} + 3`} />}
+                tooltip={<BtnTooltip text="H3标题" shortCode={`${modKey} + 3`} />}
                 delay={500}
               >
                 {(triggerRef) => (
@@ -271,32 +271,32 @@ export function Toolbar() {
               <MarkButton
                 format={MarkType.Bold}
                 icon={Icons.Bold}
-                tooltip={<BtnTooltip text="Bold" shortCode={`${modKey} + B`} />}
+                tooltip={<BtnTooltip text="粗体" shortCode={`${modKey} + B`} />}
               />
               <MarkButton
                 format={MarkType.Italic}
                 icon={Icons.Italic}
-                tooltip={<BtnTooltip text="Italic" shortCode={`${modKey} + I`} />}
+                tooltip={<BtnTooltip text="斜体" shortCode={`${modKey} + I`} />}
               />
               <MarkButton
                 format={MarkType.Underline}
                 icon={Icons.Underline}
-                tooltip={<BtnTooltip text="Underline" shortCode={`${modKey} + U`} />}
+                tooltip={<BtnTooltip text="下划线" shortCode={`${modKey} + U`} />}
               />
               <MarkButton
                 format={MarkType.StrikeThrough}
                 icon={Icons.Strike}
-                tooltip={<BtnTooltip text="Strike Through" shortCode={`${modKey} + S`} />}
+                tooltip={<BtnTooltip text="删除线" shortCode={`${modKey} + S`} />}
               />
               <MarkButton
                 format={MarkType.Code}
                 icon={Icons.Code}
-                tooltip={<BtnTooltip text="Inline Code" shortCode={`${modKey} + [`} />}
+                tooltip={<BtnTooltip text="行内代码" shortCode={`${modKey} + [`} />}
               />
               <MarkButton
                 format={MarkType.Spoiler}
                 icon={Icons.EyeBlind}
-                tooltip={<BtnTooltip text="Spoiler" shortCode={`${modKey} + H`} />}
+                tooltip={<BtnTooltip text="剧透" shortCode={`${modKey} + H`} />}
               />
             </Box>
             <Line variant="SurfaceVariant" direction="Vertical" style={{ height: toRem(12) }} />
@@ -305,22 +305,22 @@ export function Toolbar() {
             <BlockButton
               format={BlockType.BlockQuote}
               icon={Icons.BlockQuote}
-              tooltip={<BtnTooltip text="Block Quote" shortCode={`${modKey} + '`} />}
+              tooltip={<BtnTooltip text="引用块" shortCode={`${modKey} + '`} />}
             />
             <BlockButton
               format={BlockType.CodeBlock}
               icon={Icons.BlockCode}
-              tooltip={<BtnTooltip text="Block Code" shortCode={`${modKey} + ;`} />}
+              tooltip={<BtnTooltip text="代码块" shortCode={`${modKey} + ;`} />}
             />
             <BlockButton
               format={BlockType.OrderedList}
               icon={Icons.OrderList}
-              tooltip={<BtnTooltip text="Ordered List" shortCode={`${modKey} + 7`} />}
+              tooltip={<BtnTooltip text="有序列表" shortCode={`${modKey} + 7`} />}
             />
             <BlockButton
               format={BlockType.UnorderedList}
               icon={Icons.UnorderList}
-              tooltip={<BtnTooltip text="Unordered List" shortCode={`${modKey} + 8`} />}
+              tooltip={<BtnTooltip text="无序列表" shortCode={`${modKey} + 8`} />}
             />
             <HeadingBlockButton />
           </Box>
@@ -330,7 +330,7 @@ export function Toolbar() {
               <Box shrink="No" gap="100">
                 <ExitFormatting
                   tooltip={
-                    <BtnTooltip text="Exit Formatting" shortCode={`Escape, ${modKey} + E`} />
+                    <BtnTooltip text="退出格式化" shortCode={`Escape, ${modKey} + E`} />
                   }
                 />
               </Box>
@@ -339,7 +339,7 @@ export function Toolbar() {
           <Box className={css.MarkdownBtnBox} shrink="No" grow="Yes" justifyContent="End">
             <TooltipProvider
               align="End"
-              tooltip={<BtnTooltip text="Toggle Markdown" />}
+              tooltip={<BtnTooltip text="切换 Markdown 模式" />}
               delay={500}
             >
               {(triggerRef) => (

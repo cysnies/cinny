@@ -255,7 +255,7 @@ function Search() {
           </ScrollView>
         </div>
         <div className="search-dialog__footer">
-          <Text variant="b3">输入 # 来搜索房间，输入 @ 来搜索管理员，输入 * 来搜索空间。快捷键：Ctrl + K</Text>
+          <Text variant="b3">输入 # 来搜索房间，输入 @ 来搜索管理员，输入 * 来搜索频道。快捷键：Ctrl + K</Text>
         </div>
       </div>
     </RawModal>

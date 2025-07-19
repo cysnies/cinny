@@ -200,7 +200,7 @@ const SpaceMenu = forwardRef<HTMLDivElement, SpaceMenuProps>(
             radii="300"
           >
             <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-              空间设置
+              频道设置
             </Text>
           </MenuItem>
         </Box>

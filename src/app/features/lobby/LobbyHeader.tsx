@@ -82,7 +82,7 @@ const LobbyMenu = forwardRef<HTMLDivElement, LobbyMenuProps>(
             radii="300"
           >
             <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-              空间设置
+              频道设置
             </Text>
           </MenuItem>
         </Box>
@@ -101,7 +101,7 @@ const LobbyMenu = forwardRef<HTMLDivElement, LobbyMenuProps>(
                   aria-pressed={promptLeave}
                 >
                   <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-                    离开空间
+                    离开频道
                   </Text>
                 </MenuItem>
                 {promptLeave && (

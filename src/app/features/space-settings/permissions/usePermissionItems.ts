@@ -12,7 +12,7 @@ export const usePermissionGroups = (): PermissionGroup[] => {
             state: true,
             key: StateEvent.SpaceChild,
           },
-          name: '管理空间中的房间',
+          name: '管理频道中的房间',
         },
         {
           location: {},
@@ -49,28 +49,28 @@ export const usePermissionGroups = (): PermissionGroup[] => {
     };
 
     const roomOverviewGroup: PermissionGroup = {
-      name: '空间概况',
+      name: '频道概况',
       items: [
         {
           location: {
             state: true,
             key: StateEvent.RoomAvatar,
           },
-          name: '空间头像',
+          name: '频道头像',
         },
         {
           location: {
             state: true,
             key: StateEvent.RoomName,
           },
-          name: '空间名称',
+          name: '频道名称',
         },
         {
           location: {
             state: true,
             key: StateEvent.RoomTopic,
           },
-          name: '空间话题',
+          name: '频道话题',
         },
       ],
     };
@@ -83,7 +83,7 @@ export const usePermissionGroups = (): PermissionGroup[] => {
             state: true,
             key: StateEvent.RoomJoinRules,
           },
-          name: '修改空间访问性',
+          name: '修改频道访问性',
         },
         {
           location: {
@@ -111,7 +111,7 @@ export const usePermissionGroups = (): PermissionGroup[] => {
             state: true,
             key: StateEvent.RoomTombstone,
           },
-          name: '升级空间',
+          name: '升级频道',
         },
         {
           location: {
