@@ -36,6 +36,7 @@ export function SidebarNav() {
             <SpaceTabs scrollRef={scrollRef} />
             <SidebarStackSeparator />
             <SidebarStack>
+              <ExploreTab />
               <SidebarItem>
                 <SidebarItemTooltip tooltip="新建频道">
                   {(triggerRef) => (

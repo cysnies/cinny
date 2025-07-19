@@ -179,6 +179,16 @@ function HomeEmpty() {
                 创建房间
               </Text>
             </Button>
+            <Button
+              onClick={() => navigate(getExplorePath())}
+              variant="Secondary"
+              fill="Soft"
+              size="300"
+            >
+              <Text size="B300" truncate>
+                探索房间
+              </Text>
+            </Button>
           </>
         }
       />
