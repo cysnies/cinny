@@ -102,7 +102,7 @@ function DirectHeader() {
         <Box alignItems="Center" grow="Yes" gap="300">
           <Box grow="Yes">
             <Text size="H4" truncate>
-              私聊消息
+              私聊
             </Text>
           </Box>
           <Box>

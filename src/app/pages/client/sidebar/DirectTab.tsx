@@ -93,7 +93,7 @@ export function DirectTab() {
   };
   return (
     <SidebarItem active={directSelected}>
-      <SidebarItemTooltip tooltip="私聊消息">
+      <SidebarItemTooltip tooltip="私聊">
         {(triggerRef) => (
           <SidebarAvatar
             as="button"
