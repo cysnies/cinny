@@ -61,7 +61,7 @@ export function SSOStage({
         gap="400"
       >
         <Text size="T200">
-          To perform this action you need to authenticate yourself by SSO login.
+          要执行此操作，你需要通过 SSO 进行身份验证。
         </Text>
         {errorCode && (
           <Box alignItems="Center" gap="100" style={{ color: color.Critical.Main }}>
