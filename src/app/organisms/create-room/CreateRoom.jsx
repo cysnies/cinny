@@ -122,18 +122,18 @@ function CreateRoomContent({ isSpace, parentId, onRequestClose }) {
   };
 
   const joinRules = ['invite', 'restricted', 'public'];
-  const joinRuleShortText = ['Private', 'Restricted', 'Public'];
+  const joinRuleShortText = ['私人', '内部', '公开'];
   const joinRuleText = [
-    'Private (invite only)',
-    'Restricted (space member can join)',
-    'Public (anyone can join)',
+    '私人（只有被邀请才能加入）',
+    '内部（空间成员可以加入）',
+    '公开（任何人都可以加入）',
   ];
   const jrRoomIC = [HashLockIC, HashIC, HashGlobeIC];
   const jrSpaceIC = [SpaceLockIC, SpaceIC, SpaceGlobeIC];
   const handleJoinRule = (evt) => {
     openReusableContextMenu('bottom', getEventCords(evt, '.btn-surface'), (closeMenu) => (
       <>
-        <MenuHeader>Visibility (who can join)</MenuHeader>
+        <MenuHeader>可见性（谁可以加入）</MenuHeader>
         {joinRules.map((rule) => (
           <MenuItem
             key={rule}
@@ -158,14 +158,14 @@ function CreateRoomContent({ isSpace, parentId, onRequestClose }) {
     <div className="create-room">
       <form className="create-room__form" onSubmit={handleSubmit}>
         <SettingTile
-          title="Visibility"
+          title="可见性"
           options={
             <Button onClick={handleJoinRule} iconSrc={ChevronBottomIC}>
               {joinRuleShortText[joinRules.indexOf(joinRule)]}
             </Button>
           }
           content={
-            <Text variant="b3">{`Select who can join this ${isSpace ? 'space' : 'room'}.`}</Text>
+            <Text variant="b3">{`选择谁可以加入${isSpace ? '空间' : '房间'}.`}</Text>
           }
         />
         {joinRule === 'public' && (
@@ -180,7 +180,7 @@ function CreateRoomContent({ isSpace, parentId, onRequestClose }) {
                 onChange={validateAddress}
                 state={isValidAddress === false ? 'error' : 'normal'}
                 forwardRef={addressRef}
-                placeholder="my_address"
+                placeholder="我的地址"
                 required
               />
               <Text variant="b1">{`:${userHs}`}</Text>
@@ -196,38 +196,38 @@ function CreateRoomContent({ isSpace, parentId, onRequestClose }) {
         )}
         {!isSpace && joinRule !== 'public' && (
           <SettingTile
-            title="Enable end-to-end encryption"
+            title="启用端到端加密"
             options={<Toggle isActive={isEncrypted} onToggle={setIsEncrypted} />}
             content={
               <Text variant="b3">
-                You can’t disable this later. Bridges & most bots won’t work yet.
+                端到端加密启用后将不能关闭，并且会使大多数桥接器和机器人无法使用。
               </Text>
             }
           />
         )}
         <SettingTile
-          title="Select your role"
+          title="选择你的角色"
           options={
             <SegmentControl
               selected={roleIndex}
-              segments={[{ text: 'Admin' }, { text: 'Founder' }]}
+              segments={[{ text: '管理员' }, { text: '创建者' }]}
               onSelect={setRoleIndex}
             />
           }
           content={
-            <Text variant="b3">Selecting Admin sets 100 power level whereas Founder sets 101.</Text>
+            <Text variant="b3">管理员的权限等级为 100，而创建者的权限等级为 101。</Text>
           }
         />
-        <Input name="topic" minHeight={174} resizable label="Topic (optional)" />
+        <Input name="topic" minHeight={174} resizable label="话题（可选）" />
         <div className="create-room__name-wrapper">
-          <Input name="name" label={`${isSpace ? 'Space' : 'Room'} name`} required />
+          <Input name="name" label={`${isSpace ? '空间' : '房间'}名称`} required />
           <Button
             disabled={isValidAddress === false || isCreatingRoom}
             iconSrc={isSpace ? SpacePlusIC : HashPlusIC}
             type="submit"
             variant="primary"
           >
-            Create
+            创建
           </Button>
         </div>
         {isCreatingRoom && (
@@ -286,13 +286,13 @@ function CreateRoom() {
       isOpen={create !== null}
       title={
         <Text variant="s1" weight="medium" primary>
-          {parentId ? room.name : 'Home'}
+          {parentId ? room.name : '主页'}
           <span style={{ color: 'var(--tc-surface-low)' }}>
-            {` — create ${isSpace ? 'space' : 'room'}`}
+            {` — 新建${isSpace ? '空间' : '房间'}`}
           </span>
         </Text>
       }
-      contentOptions={<IconButton src={CrossIC} onClick={onRequestClose} tooltip="Close" />}
+      contentOptions={<IconButton src={CrossIC} onClick={onRequestClose} tooltip="关闭" />}
       onRequestClose={onRequestClose}
     >
       {create ? (

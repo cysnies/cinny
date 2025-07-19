@@ -9,15 +9,15 @@ export function BetaNoticeBadge() {
       tooltip={
         <Tooltip style={{ maxWidth: toRem(200) }}>
           <Box direction="Column">
-            <Text size="L400">Notice</Text>
-            <Text size="T200">This feature is under testing and may change over time.</Text>
+            <Text size="L400">注意</Text>
+            <Text size="T200">此功能正在测试中，可能会随时变化。</Text>
           </Box>
         </Tooltip>
       }
     >
       {(triggerRef) => (
         <Badge size="500" tabIndex={0} ref={triggerRef} variant="Primary" fill="Solid">
-          <Text size="L400">Beta</Text>
+          <Text size="L400">测试</Text>
         </Badge>
       )}
     </TooltipProvider>

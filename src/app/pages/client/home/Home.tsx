@@ -85,7 +85,7 @@ const HomeMenu = forwardRef<HTMLDivElement, HomeMenuProps>(({ requestClose }, re
           aria-disabled={!unread}
         >
           <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-            Mark as Read
+            标记为已读
           </Text>
         </MenuItem>
         <MenuItem
@@ -95,7 +95,7 @@ const HomeMenu = forwardRef<HTMLDivElement, HomeMenuProps>(({ requestClose }, re
           after={<Icon size="100" src={Icons.Link} />}
         >
           <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-            Join with Address
+            通过地址加入
           </Text>
         </MenuItem>
       </Box>
@@ -120,7 +120,7 @@ function HomeHeader() {
         <Box alignItems="Center" grow="Yes" gap="300">
           <Box grow="Yes">
             <Text size="H4" truncate>
-              Home
+              主页
             </Text>
           </Box>
           <Box>
@@ -164,29 +164,19 @@ function HomeEmpty() {
         icon={<Icon size="600" src={Icons.Hash} />}
         title={
           <Text size="H5" align="Center">
-            No Rooms
+            没有房间
           </Text>
         }
         content={
           <Text size="T300" align="Center">
-            You do not have any rooms yet.
+            你还没有加入任何一个房间。
           </Text>
         }
         options={
           <>
             <Button onClick={() => openCreateRoom()} variant="Secondary" size="300">
               <Text size="B300" truncate>
-                Create Room
-              </Text>
-            </Button>
-            <Button
-              onClick={() => navigate(getExplorePath())}
-              variant="Secondary"
-              fill="Soft"
-              size="300"
-            >
-              <Text size="B300" truncate>
-                Explore Community Rooms
+                创建房间
               </Text>
             </Button>
           </>
@@ -251,7 +241,7 @@ export function Home() {
                       </Avatar>
                       <Box as="span" grow="Yes">
                         <Text as="span" size="Inherit" truncate>
-                          Create Room
+                          创建房间
                         </Text>
                       </Box>
                     </Box>
@@ -267,7 +257,7 @@ export function Home() {
                       </Avatar>
                       <Box as="span" grow="Yes">
                         <Text as="span" size="Inherit" truncate>
-                          Join with Address
+                          通过地址加入
                         </Text>
                       </Box>
                     </Box>
@@ -283,7 +273,7 @@ export function Home() {
                       </Avatar>
                       <Box as="span" grow="Yes">
                         <Text as="span" size="Inherit" truncate>
-                          Message Search
+                          消息搜索
                         </Text>
                       </Box>
                     </Box>
@@ -298,7 +288,7 @@ export function Home() {
                   data-category-id={DEFAULT_CATEGORY_ID}
                   onClick={handleCategoryClick}
                 >
-                  Rooms
+                  房间
                 </RoomNavCategoryButton>
               </NavCategoryHeader>
               <div

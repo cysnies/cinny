@@ -121,7 +121,7 @@ function AccountDataEdit({
       aria-disabled={submitting}
     >
       <Box shrink="No" direction="Column" gap="100">
-        <Text size="L400">Account Data</Text>
+        <Text size="L400">账号数据</Text>
         <Box gap="300">
           <Box grow="Yes" direction="Column">
             <Input
@@ -208,7 +208,7 @@ function AccountDataView({ type, defaultContent, onEdit }: AccountDataViewProps)
     >
       <Box shrink="No" gap="300" alignItems="End">
         <Box grow="Yes" direction="Column" gap="100">
-          <Text size="L400">Account Data</Text>
+          <Text size="L400">帐号数据</Text>
           <Input
             variant="SurfaceVariant"
             size="400"
@@ -219,11 +219,11 @@ function AccountDataView({ type, defaultContent, onEdit }: AccountDataViewProps)
           />
         </Box>
         <Button variant="Secondary" size="400" radii="300" onClick={onEdit}>
-          <Text size="B400">Edit</Text>
+          <Text size="B400">编辑</Text>
         </Button>
       </Box>
       <Box grow="Yes" direction="Column" gap="100">
-        <Text size="L400">JSON Content</Text>
+        <Text size="L400">JSON 内容</Text>
         <SequenceCard variant="SurfaceVariant">
           <Scroll visibility="Always" size="300" hideTrack>
             <TextViewerContent
@@ -290,7 +290,7 @@ export function AccountDataEditor({
               onClick={requestClose}
               before={<Icon size="100" src={Icons.ArrowLeft} />}
             >
-              <Text size="T300">Developer Tools</Text>
+              <Text size="T300">开发者工具</Text>
             </Chip>
           </Box>
           <Box shrink="No">

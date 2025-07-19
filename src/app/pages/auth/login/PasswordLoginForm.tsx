@@ -70,19 +70,19 @@ function UsernameHint({ server }: { server: string }) {
             >
               <Text size="T300">
                 <Text as="span" size="Inherit" priority="300">
-                  Username:
+                  用户名：
                 </Text>{' '}
                 johndoe
               </Text>
               <Text size="T300">
                 <Text as="span" size="Inherit" priority="300">
-                  Matrix ID:
+                  Matrix ID：
                 </Text>
                 {` @johndoe:${server}`}
               </Text>
               <Text size="T300">
                 <Text as="span" size="Inherit" priority="300">
-                  Email:
+                  邮箱：
                 </Text>
                 {` johndoe@${server}`}
               </Text>

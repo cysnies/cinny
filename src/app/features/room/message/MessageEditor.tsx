@@ -252,7 +252,7 @@ export const MessageEditor = as<'div', MessageEditorProps>(
         )}
         <CustomEditor
           editor={editor}
-          placeholder="Edit message..."
+          placeholder="编辑消息..."
           onKeyDown={handleKeyDown}
           onKeyUp={handleKeyUp}
           bottom={
@@ -276,10 +276,10 @@ export const MessageEditor = as<'div', MessageEditorProps>(
                       ) : undefined
                     }
                   >
-                    <Text size="B300">Save</Text>
+                    <Text size="B300">保存</Text>
                   </Chip>
                   <Chip onClick={onCancel} variant="SurfaceVariant" radii="Pill">
-                    <Text size="B300">Cancel</Text>
+                    <Text size="B300">取消</Text>
                   </Chip>
                 </Box>
                 <Box gap="Inherit">

@@ -52,7 +52,7 @@ const DirectMenu = forwardRef<HTMLDivElement, DirectMenuProps>(({ requestClose }
           aria-disabled={!unread}
         >
           <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-            Mark as Read
+            标记为已读
           </Text>
         </MenuItem>
       </Box>
@@ -93,7 +93,7 @@ export function DirectTab() {
   };
   return (
     <SidebarItem active={directSelected}>
-      <SidebarItemTooltip tooltip="Direct Messages">
+      <SidebarItemTooltip tooltip="私聊消息">
         {(triggerRef) => (
           <SidebarAvatar
             as="button"

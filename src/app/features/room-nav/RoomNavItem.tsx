@@ -99,7 +99,7 @@ const RoomNavItemMenu = forwardRef<HTMLDivElement, RoomNavItemMenuProps>(
             disabled={!unread}
           >
             <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-              Mark as Read
+              标记为已读
             </Text>
           </MenuItem>
           <RoomNotificationModeSwitcher roomId={room.roomId} value={notificationMode}>
@@ -118,7 +118,7 @@ const RoomNavItemMenu = forwardRef<HTMLDivElement, RoomNavItemMenuProps>(
                 onClick={handleOpen}
               >
                 <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-                  Notifications
+                  通知
                 </Text>
               </MenuItem>
             )}
@@ -136,7 +136,7 @@ const RoomNavItemMenu = forwardRef<HTMLDivElement, RoomNavItemMenuProps>(
             disabled={!canInvite}
           >
             <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-              Invite
+              邀请
             </Text>
           </MenuItem>
           <MenuItem
@@ -146,7 +146,7 @@ const RoomNavItemMenu = forwardRef<HTMLDivElement, RoomNavItemMenuProps>(
             radii="300"
           >
             <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-              Copy Link
+              复制链接
             </Text>
           </MenuItem>
           <MenuItem
@@ -156,7 +156,7 @@ const RoomNavItemMenu = forwardRef<HTMLDivElement, RoomNavItemMenuProps>(
             radii="300"
           >
             <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-              Room Settings
+              房间设置
             </Text>
           </MenuItem>
         </Box>
@@ -175,7 +175,7 @@ const RoomNavItemMenu = forwardRef<HTMLDivElement, RoomNavItemMenuProps>(
                   aria-pressed={promptLeave}
                 >
                   <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-                    Leave Room
+                    离开房间
                   </Text>
                 </MenuItem>
                 {promptLeave && (

@@ -823,7 +823,7 @@ export function EmojiBoard({
                 data-emoji-board-search
                 variant="SurfaceVariant"
                 size="400"
-                placeholder={allowTextCustomEmoji ? 'Search or Text Reaction ' : 'Search'}
+                placeholder={allowTextCustomEmoji ? '搜索或文字反应 ' : '搜索'}
                 maxLength={50}
                 after={
                   allowTextCustomEmoji && result?.query ? (
@@ -842,7 +842,7 @@ export function EmojiBoard({
                         requestClose();
                       }}
                     >
-                      <Text size="L400">React</Text>
+                      <Text size="L400">反应</Text>
                     </Chip>
                   ) : (
                     <Icon src={Icons.Search} size="50" />

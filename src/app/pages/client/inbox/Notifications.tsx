@@ -422,7 +422,7 @@ function RoomNotificationsGroupComp({
               onClick={handleMarkAsRead}
               before={<Icon size="100" src={Icons.CheckTwice} />}
             >
-              <Text size="T200">Mark as Read</Text>
+              <Text size="T200">标记为已读</Text>
             </Chip>
           )}
         </Box>
@@ -632,7 +632,7 @@ export function Notifications() {
           <Box alignItems="Center" gap="200">
             {screenSize !== ScreenSize.Mobile && <Icon size="400" src={Icons.Message} />}
             <Text size="H3" truncate>
-              Notification Messages
+              通知
             </Text>
           </Box>
           <Box grow="Yes" basis="No" />
@@ -646,7 +646,7 @@ export function Notifications() {
               <Box direction="Column" gap="200">
                 <Box ref={scrollTopAnchorRef} direction="Column" gap="100">
                   <span data-spacing-node />
-                  <Text size="L400">Filter</Text>
+                  <Text size="L400">筛选</Text>
                   <Box gap="200">
                     <Chip
                       onClick={() => setOnlyHighlighted(false)}
@@ -655,7 +655,7 @@ export function Notifications() {
                       before={!onlyHighlight && <Icon size="100" src={Icons.Check} />}
                       outlined
                     >
-                      <Text size="T200">All Notifications</Text>
+                      <Text size="T200">所有通知</Text>
                     </Chip>
                     <Chip
                       onClick={() => setOnlyHighlighted(true)}
@@ -664,7 +664,7 @@ export function Notifications() {
                       before={onlyHighlight && <Icon size="100" src={Icons.Check} />}
                       outlined
                     >
-                      <Text size="T200">Highlighted</Text>
+                      <Text size="T200">高亮通知</Text>
                     </Chip>
                   </Box>
                 </Box>
@@ -730,9 +730,9 @@ export function Notifications() {
                       direction="Column"
                       gap="200"
                     >
-                      <Text>No Notifications</Text>
+                      <Text>没有通知</Text>
                       <Text size="T200">
-                        You don&apos;t have any new notifications to display yet.
+                        你还没有收到任何新的通知。
                       </Text>
                     </Box>
                   )}

@@ -1572,7 +1572,7 @@ export function RoomTimeline({
         <MessageBase space={messageSpacing}>
           <TimelineDivider style={{ color: color.Success.Main }} variant="Inherit">
             <Badge as="span" size="500" variant="Success" fill="Solid" radii="300">
-              <Text size="L400">New Messages</Text>
+              <Text size="L400">新的消息</Text>
             </Badge>
           </TimelineDivider>
         </MessageBase>
@@ -1585,8 +1585,8 @@ export function RoomTimeline({
             <Badge as="span" size="500" variant="Secondary" fill="None" radii="300">
               <Text size="L400">
                 {(() => {
-                  if (today(mEvent.getTs())) return 'Today';
-                  if (yesterday(mEvent.getTs())) return 'Yesterday';
+                  if (today(mEvent.getTs())) return '今天';
+                  if (yesterday(mEvent.getTs())) return '昨天';
                   return timeDayMonthYear(mEvent.getTs());
                 })()}
               </Text>
@@ -1622,7 +1622,7 @@ export function RoomTimeline({
             before={<Icon size="50" src={Icons.MessageUnread} />}
             onClick={handleJumpToUnread}
           >
-            <Text size="L400">Jump to Unread</Text>
+            <Text size="L400">跳转到未读消息</Text>
           </Chip>
 
           <Chip
@@ -1632,7 +1632,7 @@ export function RoomTimeline({
             before={<Icon size="50" src={Icons.CheckTwice} />}
             onClick={handleMarkAsRead}
           >
-            <Text size="L400">Mark as Read</Text>
+            <Text size="L400">标记为已读</Text>
           </Chip>
         </TimelineFloat>
       )}
@@ -1732,7 +1732,7 @@ export function RoomTimeline({
             before={<Icon size="50" src={Icons.ArrowBottom} />}
             onClick={handleJumpToLatest}
           >
-            <Text size="L400">Jump to Latest</Text>
+            <Text size="L400">跳转到最新消息</Text>
           </Chip>
         </TimelineFloat>
       )}

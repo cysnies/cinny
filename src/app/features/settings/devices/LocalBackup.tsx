@@ -66,7 +66,7 @@ function ExportKeys() {
             {(match, doMatch, passRef, confPassRef) => (
               <>
                 <Box grow="Yes" direction="Column" gap="100">
-                  <Text size="L400">New Password</Text>
+                  <Text size="L400">新密码</Text>
                   <PasswordInput
                     ref={passRef}
                     name="passwordInput"
@@ -80,7 +80,7 @@ function ExportKeys() {
                   />
                 </Box>
                 <Box grow="Yes" direction="Column" gap="100">
-                  <Text size="L400">Confirm Password</Text>
+                  <Text size="L400">确认密码</Text>
                   <PasswordInput
                     ref={confPassRef}
                     style={{ color: match ? undefined : color.Critical.Main }}
@@ -107,7 +107,7 @@ function ExportKeys() {
             before={exporting ? <Spinner size="200" variant="Secondary" fill="Soft" /> : undefined}
           >
             <Text as="span" size="B400">
-              Export
+              导出
             </Text>
           </Button>
         </Box>
@@ -127,8 +127,8 @@ function ExportKeysTile() {
   return (
     <>
       <SettingTile
-        title="Export Messages Data"
-        description="Save password protected copy of encryption data on your device to decrypt messages later."
+        title="导出聊天数据"
+        description="在你的设备上保存受密码保护的加密数据副本，以便之后解密消息。"
         after={
           <Box>
             <Button
@@ -144,7 +144,7 @@ function ExportKeysTile() {
               }
             >
               <Text as="span" size="B300" truncate>
-                {expand ? 'Collapse' : 'Expand'}
+                {expand ? '折叠' : '展开'}
               </Text>
             </Button>
           </Box>
@@ -256,8 +256,8 @@ function ImportKeysTile() {
   return (
     <>
       <SettingTile
-        title="Import Messages Data"
-        description="Load password protected copy of encryption data from device to decrypt your messages."
+        title="导入聊天数据"
+        description="从设备加载受密码保护的加密数据副本并解密你的消息。"
         after={
           <Box>
             {file ? (
@@ -288,7 +288,7 @@ function ImportKeysTile() {
                 before={<Icon size="100" src={Icons.ArrowRight} />}
               >
                 <Text as="span" size="B300">
-                  Import
+                  导入
                 </Text>
               </Button>
             )}
@@ -303,7 +303,7 @@ function ImportKeysTile() {
 export function LocalBackup() {
   return (
     <Box direction="Column" gap="100">
-      <Text size="L400">Local Backup</Text>
+      <Text size="L400">本地备份</Text>
       <SequenceCard
         className={SequenceCardStyle}
         variant="SurfaceVariant"

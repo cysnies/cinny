@@ -146,12 +146,12 @@ function RoomProfileError({ roomId, suggested, inaccessibleRoom, via }: RoomProf
       <Box grow="Yes" direction="Column" className={css.ErrorNameContainer}>
         <Box gap="200" alignItems="Center">
           <Text size="H5" truncate>
-            Unknown
+            未知
           </Text>
           {suggested && (
             <Box shrink="No" alignItems="Center">
               <Badge variant="Success" fill="Soft" radii="Pill" outlined>
-                <Text size="L400">Suggested</Text>
+                <Text size="L400">推荐</Text>
               </Badge>
             </Box>
           )}
@@ -159,7 +159,7 @@ function RoomProfileError({ roomId, suggested, inaccessibleRoom, via }: RoomProf
         <Box gap="200" alignItems="Center">
           {inaccessibleRoom ? (
             <Badge variant="Secondary" fill="Soft" radii="300" size="500">
-              <Text size="L400">Inaccessible</Text>
+              <Text size="L400">不可访问</Text>
             </Badge>
           ) : (
             <Text size="T200" truncate>
@@ -213,7 +213,7 @@ function RoomProfile({
           {suggested && (
             <Box shrink="No" alignItems="Center">
               <Badge variant="Success" fill="Soft" radii="Pill" outlined>
-                <Text size="L400">Suggested</Text>
+                <Text size="L400">推荐</Text>
               </Badge>
             </Box>
           )}
@@ -221,7 +221,7 @@ function RoomProfile({
         <Box gap="200" alignItems="Center">
           {memberCount && (
             <Box shrink="No" gap="200">
-              <Text size="T200" priority="300">{`${millify(memberCount)} Members`}</Text>
+              <Text size="T200" priority="300">{`${millify(memberCount)} 位成员`}</Text>
             </Box>
           )}
           {memberCount && topic && (

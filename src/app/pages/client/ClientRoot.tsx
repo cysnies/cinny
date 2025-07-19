@@ -44,7 +44,7 @@ function ClientRootLoading() {
     <SplashScreen>
       <Box direction="Column" grow="Yes" alignItems="Center" justifyContent="Center" gap="400">
         <Spinner variant="Secondary" size="600" />
-        <Text>Heating up</Text>
+        <Text>正在加载资源文件...</Text>
       </Box>
     </SplashScreen>
   );
@@ -95,7 +95,7 @@ function ClientRootOptions({ mx }: { mx?: MatrixClient }) {
                 {mx && (
                   <MenuItem onClick={() => clearCacheAndReload(mx)} size="300" radii="300">
                     <Text as="span" size="T300" truncate>
-                      Clear Cache and Reload
+                      清除缓存并重新加载
                     </Text>
                   </MenuItem>
                 )}
@@ -113,7 +113,7 @@ function ClientRootOptions({ mx }: { mx?: MatrixClient }) {
                   fill="None"
                 >
                   <Text as="span" size="T300" truncate>
-                    Logout
+                    退出登录
                   </Text>
                 </MenuItem>
               </Box>
@@ -196,7 +196,7 @@ export function ClientRoot({ children }: ClientRootProps) {
                 )}
                 <Button variant="Critical" onClick={mx ? () => startMatrix(mx) : loadMatrix}>
                   <Text as="span" size="B400">
-                    Retry
+                    重试
                   </Text>
                 </Button>
               </Box>

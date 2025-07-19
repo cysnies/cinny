@@ -38,7 +38,7 @@ export function Permissions({ requestClose }: PermissionsProps) {
         <Box grow="Yes" gap="200">
           <Box grow="Yes" alignItems="Center" gap="200">
             <Text size="H3" truncate>
-              Permissions
+              权限
             </Text>
           </Box>
           <Box shrink="No">

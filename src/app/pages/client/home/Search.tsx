@@ -29,7 +29,7 @@ export function HomeSearch() {
           <Box justifyContent="Center" alignItems="Center" gap="200">
             {screenSize !== ScreenSize.Mobile && <Icon size="400" src={Icons.Search} />}
             <Text size="H3" truncate>
-              Message Search
+              在消息中搜索
             </Text>
           </Box>
           <Box grow="Yes" basis="No" />

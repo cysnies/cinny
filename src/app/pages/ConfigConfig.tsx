@@ -7,7 +7,7 @@ export function ConfigConfigLoading() {
     <SplashScreen>
       <Box grow="Yes" direction="Column" gap="400" alignItems="Center" justifyContent="Center">
         <Spinner variant="Secondary" size="600" />
-        <Text>Heating up</Text>
+        <Text>加载中...</Text>
       </Box>
     </SplashScreen>
   );
@@ -37,12 +37,12 @@ export function ConfigConfigError({ error, retry, ignore }: ConfigConfigErrorPro
             </Box>
             <Button variant="Critical" onClick={retry}>
               <Text as="span" size="B400">
-                Retry
+                重试
               </Text>
             </Button>
             <Button variant="Critical" onClick={ignore} fill="Soft">
               <Text as="span" size="B400">
-                Continue
+                继续
               </Text>
             </Button>
           </Box>

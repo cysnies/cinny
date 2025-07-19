@@ -36,9 +36,8 @@ export function SidebarNav() {
             <SpaceTabs scrollRef={scrollRef} />
             <SidebarStackSeparator />
             <SidebarStack>
-              <ExploreTab />
               <SidebarItem>
-                <SidebarItemTooltip tooltip="Create Space">
+                <SidebarItemTooltip tooltip="新建空间">
                   {(triggerRef) => (
                     <SidebarAvatar
                       as="button"
@@ -59,7 +58,7 @@ export function SidebarNav() {
             <SidebarStackSeparator />
             <SidebarStack>
               <SidebarItem>
-                <SidebarItemTooltip tooltip="Search">
+                <SidebarItemTooltip tooltip="搜索">
                   {(triggerRef) => (
                     <SidebarAvatar
                       as="button"

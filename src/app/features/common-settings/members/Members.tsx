@@ -152,7 +152,7 @@ export function Members({ requestClose }: MembersProps) {
         <Box grow="Yes" gap="200">
           <Box grow="Yes" alignItems="Center" gap="200">
             <Text size="H3" truncate>
-              {room.getJoinedMemberCount()} Members
+              {room.getJoinedMemberCount()} 位成员
             </Text>
           </Box>
           <Box shrink="No">
@@ -177,7 +177,7 @@ export function Members({ requestClose }: MembersProps) {
                   before={<Icon size="200" src={Icons.Search} />}
                   variant="SurfaceVariant"
                   size="500"
-                  placeholder="Search"
+                  placeholder="搜索"
                   outlined
                   after={
                     result && (
@@ -290,7 +290,7 @@ export function Members({ requestClose }: MembersProps) {
 
               {!fetchingMembers && !result && flattenTagMembers.length === 0 && (
                 <Text style={{ padding: config.space.S300 }} align="Center">
-                  {`No "${membershipFilter.name}" Members`}
+                  {`没有 "${membershipFilter.name}" 成员`}
                 </Text>
               )}
 

@@ -5,25 +5,25 @@ import { PermissionGroup } from '../../common-settings/permissions';
 export const usePermissionGroups = (): PermissionGroup[] => {
   const groups: PermissionGroup[] = useMemo(() => {
     const messagesGroup: PermissionGroup = {
-      name: 'Messages',
+      name: '消息',
       items: [
         {
           location: {
             key: MessageEvent.RoomMessage,
           },
-          name: 'Send Messages',
+          name: '发送消息',
         },
         {
           location: {
             key: MessageEvent.Sticker,
           },
-          name: 'Send Stickers',
+          name: '发送贴纸',
         },
         {
           location: {
             key: MessageEvent.Reaction,
           },
-          name: 'Send Reactions',
+          name: '发送反应',
         },
         {
           location: {
@@ -37,159 +37,159 @@ export const usePermissionGroups = (): PermissionGroup[] => {
             state: true,
             key: StateEvent.RoomPinnedEvents,
           },
-          name: 'Pin Messages',
+          name: '置顶消息',
         },
         {
           location: {},
-          name: 'Other Message Events',
+          name: '其他消息事件',
         },
       ],
     };
 
     const moderationGroup: PermissionGroup = {
-      name: 'Moderation',
+      name: '审核',
       items: [
         {
           location: {
             action: true,
             key: 'invite',
           },
-          name: 'Invite',
+          name: '邀请',
         },
         {
           location: {
             action: true,
             key: 'kick',
           },
-          name: 'Kick',
+          name: '踢出',
         },
         {
           location: {
             action: true,
             key: 'ban',
           },
-          name: 'Ban',
+          name: '封禁',
         },
         {
           location: {
             action: true,
             key: 'redact',
           },
-          name: 'Delete Others Messages',
+          name: '删除其他消息',
         },
         {
           location: {
             key: MessageEvent.RoomRedaction,
           },
-          name: 'Delete Self Messages',
+          name: '删除自己的消息',
         },
       ],
     };
 
     const roomOverviewGroup: PermissionGroup = {
-      name: 'Room Overview',
+      name: '房间概况',
       items: [
         {
           location: {
             state: true,
             key: StateEvent.RoomAvatar,
           },
-          name: 'Room Avatar',
+          name: '房间头像',
         },
         {
           location: {
             state: true,
             key: StateEvent.RoomName,
           },
-          name: 'Room Name',
+          name: '房间名称',
         },
         {
           location: {
             state: true,
             key: StateEvent.RoomTopic,
           },
-          name: 'Room Topic',
+          name: '房间话题',
         },
       ],
     };
 
     const roomSettingsGroup: PermissionGroup = {
-      name: 'Settings',
+      name: '设置',
       items: [
         {
           location: {
             state: true,
             key: StateEvent.RoomJoinRules,
           },
-          name: 'Change Room Access',
+          name: '修改房间的访问方式',
         },
         {
           location: {
             state: true,
             key: StateEvent.RoomCanonicalAlias,
           },
-          name: 'Publish Address',
+          name: '公开地址',
         },
         {
           location: {
             state: true,
             key: StateEvent.RoomPowerLevels,
           },
-          name: 'Change All Permission',
+          name: '修改全部权限',
         },
         {
           location: {
             state: true,
             key: StateEvent.PowerLevelTags,
           },
-          name: 'Edit Power Levels',
+          name: '修改权限等级',
         },
         {
           location: {
             state: true,
             key: StateEvent.RoomEncryption,
           },
-          name: 'Enable Encryption',
+          name: '启用端到端加密',
         },
         {
           location: {
             state: true,
             key: StateEvent.RoomHistoryVisibility,
           },
-          name: 'History Visibility',
+          name: '历史记录可见性',
         },
         {
           location: {
             state: true,
             key: StateEvent.RoomTombstone,
           },
-          name: 'Upgrade Room',
+          name: '升级房间',
         },
         {
           location: {
             state: true,
           },
-          name: 'Other Settings',
+          name: '其他设置',
         },
       ],
     };
 
     const otherSettingsGroup: PermissionGroup = {
-      name: 'Other',
+      name: '其他',
       items: [
         {
           location: {
             state: true,
             key: StateEvent.RoomServerAcl,
           },
-          name: 'Change Server ACLs',
+          name: '更改服务器访问控制列表',
         },
         {
           location: {
             state: true,
             key: 'im.vector.modular.widgets',
           },
-          name: 'Modify Widgets',
+          name: '修改小部件',
         },
       ],
     };

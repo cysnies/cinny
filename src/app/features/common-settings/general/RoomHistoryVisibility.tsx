@@ -29,10 +29,10 @@ import { stopPropagation } from '../../../utils/keyboard';
 const useVisibilityStr = () =>
   useMemo(
     () => ({
-      [HistoryVisibility.Invited]: 'After Invite',
-      [HistoryVisibility.Joined]: 'After Join',
-      [HistoryVisibility.Shared]: 'All Messages',
-      [HistoryVisibility.WorldReadable]: 'All Messages (Guests)',
+      [HistoryVisibility.Invited]: '邀请之后',
+      [HistoryVisibility.Joined]: '加入之后',
+      [HistoryVisibility.Shared]: '全部消息',
+      [HistoryVisibility.WorldReadable]: '全部消息（访客）',
     }),
     []
   );
@@ -100,8 +100,8 @@ export function RoomHistoryVisibility({ powerLevels }: RoomHistoryVisibilityProp
       gap="400"
     >
       <SettingTile
-        title="Message History Visibility"
-        description="Changes to history visibility will only apply to future messages. The visibility of existing history will have no effect."
+        title="历史消息可见性"
+        description="历史可见性的更改将仅适用于未来的消息。现有历史记录的可见性不会受到影响。"
         after={
           <PopOut
             anchor={menuAnchor}

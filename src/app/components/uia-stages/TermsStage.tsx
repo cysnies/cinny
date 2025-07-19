@@ -23,12 +23,12 @@ function TermsErrorDialog({
         </Box>
         <Button variant="Critical" onClick={onRetry}>
           <Text as="span" size="B400">
-            Retry
+            重试
           </Text>
         </Button>
         <Button variant="Critical" fill="None" outlined onClick={onCancel}>
           <Text as="span" size="B400">
-            Cancel
+            取消
           </Text>
         </Button>
       </Box>

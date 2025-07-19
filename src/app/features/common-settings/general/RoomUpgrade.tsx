@@ -118,12 +118,12 @@ export function RoomUpgrade({ powerLevels, requestClose }: RoomUpgradeProps) {
       gap="400"
     >
       <SettingTile
-        title={room.isSpaceRoom() ? 'Upgrade Space' : 'Upgrade Room'}
+        title={room.isSpaceRoom() ? '升级空间' : '升级房间'}
         description={
           replacementRoom
             ? tombstoneContent.body ||
-              `This ${room.isSpaceRoom() ? 'space' : 'room'} has been replaced!`
-            : `Current room version: ${roomVersion}.`
+              `这个${room.isSpaceRoom() ? '空间' : '房间'}已经被替换了！`
+            : `当前房间版本：${roomVersion}.`
         }
         after={
           <Box alignItems="Center" gap="200">
@@ -136,7 +136,7 @@ export function RoomUpgrade({ powerLevels, requestClose }: RoomUpgradeProps) {
                 radii="300"
                 onClick={handleOpenOldRoom}
               >
-                <Text size="B300">{room.isSpaceRoom() ? 'Old Space' : 'Old Room'}</Text>
+                <Text size="B300">{room.isSpaceRoom() ? '旧的空间' : '旧的房间'}</Text>
               </Button>
             )}
             {replacementRoom ? (
@@ -147,7 +147,7 @@ export function RoomUpgrade({ powerLevels, requestClose }: RoomUpgradeProps) {
                 radii="300"
                 onClick={handleOpenRoom}
               >
-                <Text size="B300">{room.isSpaceRoom() ? 'Open New Space' : 'Open New Room'}</Text>
+                <Text size="B300">{room.isSpaceRoom() ? '打开新的空间' : '打开新的房间'}</Text>
               </Button>
             ) : (
               <Button
@@ -159,7 +159,7 @@ export function RoomUpgrade({ powerLevels, requestClose }: RoomUpgradeProps) {
                 before={upgrading && <Spinner size="100" variant="Secondary" fill="Solid" />}
                 onClick={() => setPrompt(true)}
               >
-                <Text size="B300">Upgrade</Text>
+                <Text size="B300">升级</Text>
               </Button>
             )}
           </Box>
@@ -192,7 +192,7 @@ export function RoomUpgrade({ powerLevels, requestClose }: RoomUpgradeProps) {
                     size="500"
                   >
                     <Box grow="Yes">
-                      <Text size="H4">{room.isSpaceRoom() ? 'Space Upgrade' : 'Room Upgrade'}</Text>
+                      <Text size="H4">{room.isSpaceRoom() ? '空间升级' : '房间升级'}</Text>
                     </Box>
                     <IconButton size="300" onClick={() => setPrompt(false)} radii="300">
                       <Icon src={Icons.Cross} />
@@ -200,10 +200,10 @@ export function RoomUpgrade({ powerLevels, requestClose }: RoomUpgradeProps) {
                   </Header>
                   <Box style={{ padding: config.space.S400 }} direction="Column" gap="400">
                     <Text priority="400" style={{ color: color.Critical.Main }}>
-                      <b>This action is irreversible!</b>
+                      <b>该操作不可逆。</b>
                     </Text>
                     <Box direction="Column" gap="100">
-                      <Text size="L400">Version</Text>
+                      <Text size="L400">版本</Text>
                       <Input
                         defaultValue={defaultRoomVersion}
                         name="versionInput"
@@ -213,7 +213,7 @@ export function RoomUpgrade({ powerLevels, requestClose }: RoomUpgradeProps) {
                     </Box>
                     <Button type="submit" variant="Secondary">
                       <Text size="B400">
-                        {room.isSpaceRoom() ? 'Upgrade Space' : 'Upgrade Room'}
+                        {room.isSpaceRoom() ? '升级空间' : '升级房间'}
                       </Text>
                     </Button>
                   </Box>

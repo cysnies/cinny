@@ -40,7 +40,7 @@ export const ReplyLayout = as<'div', ReplyLayoutProps>(
 export const ThreadIndicator = as<'div'>(({ ...props }, ref) => (
   <Box className={css.ThreadIndicator} alignItems="Center" {...props} ref={ref}>
     <Icon className={css.ThreadIndicatorIcon} src={Icons.Message} />
-    <Text size="T200">Threaded reply</Text>
+    <Text size="T200">有上下文关联的回复</Text>
   </Box>
 ));
 

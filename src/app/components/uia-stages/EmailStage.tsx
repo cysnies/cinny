@@ -40,7 +40,7 @@ function EmailErrorDialog({
           <Text size="H4">{title}</Text>
           <Text>{message}</Text>
           <Text as="label" size="L400" style={{ paddingTop: config.space.S400 }}>
-            Email
+            邮箱
           </Text>
           <Input
             name="retryEmailInput"
@@ -53,12 +53,12 @@ function EmailErrorDialog({
         </Box>
         <Button variant="Primary" type="submit">
           <Text as="span" size="B400">
-            Send Verification Email
+            发送验证邮件
           </Text>
         </Button>
         <Button variant="Critical" fill="None" outlined type="button" onClick={onCancel}>
           <Text as="span" size="B400">
-            Cancel
+            取消
           </Text>
         </Button>
       </Box>
@@ -115,7 +115,7 @@ export function EmailStageDialog({
     return (
       <Box direction="Column" alignItems="Center" gap="400">
         <Spinner variant="Secondary" size="600" />
-        <Text style={{ color: color.Secondary.Main }}>Sending verification email...</Text>
+        <Text style={{ color: color.Secondary.Main }}>正在发送验证邮件...</Text>
       </Box>
     );
   }
@@ -123,11 +123,11 @@ export function EmailStageDialog({
   if (emailTokenState.status === AsyncStatus.Error) {
     return (
       <EmailErrorDialog
-        title={emailTokenState.error.errcode ?? 'Verify Email'}
+        title={emailTokenState.error.errcode ?? '验证邮件'}
         message={
           emailTokenState.error?.data?.error ??
           emailTokenState.error.message ??
-          'Failed to send verification Email request.'
+          '发送验证电子邮件请求失败。'
         }
         onRetry={handleEmailSubmit}
         onCancel={onCancel}
@@ -140,8 +140,8 @@ export function EmailStageDialog({
       <Dialog>
         <Box style={{ padding: config.space.S400 }} direction="Column" gap="400">
           <Box direction="Column" gap="100">
-            <Text size="H4">Verification Request Sent</Text>
-            <Text>{`Please check your email "${emailTokenState.data.email}" and validate before continuing further.`}</Text>
+            <Text size="H4">验证请求已发送</Text>
+            <Text>{`请检查你的邮箱“${emailTokenState.data.email}”并在继续之前进行验证。`}</Text>
 
             {errorCode && (
               <Text style={{ color: color.Critical.Main }}>{`${errorCode}: ${error}`}</Text>
@@ -149,7 +149,7 @@ export function EmailStageDialog({
           </Box>
           <Button variant="Primary" onClick={() => handleSubmit(emailTokenState.data.result.sid)}>
             <Text as="span" size="B400">
-              Continue
+              继续
             </Text>
           </Button>
         </Box>
@@ -160,8 +160,8 @@ export function EmailStageDialog({
   if (!email) {
     return (
       <EmailErrorDialog
-        title="Provide Email"
-        message="Please provide email to send verification request."
+        title="提供邮箱"
+        message="请提供电子邮箱以发送验证请求。"
         onRetry={handleEmailSubmit}
         onCancel={onCancel}
       />

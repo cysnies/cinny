@@ -72,7 +72,7 @@ const LobbyMenu = forwardRef<HTMLDivElement, LobbyMenuProps>(
             disabled={!canInvite}
           >
             <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-              Invite
+              邀请
             </Text>
           </MenuItem>
           <MenuItem
@@ -82,7 +82,7 @@ const LobbyMenu = forwardRef<HTMLDivElement, LobbyMenuProps>(
             radii="300"
           >
             <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-              Space Settings
+              空间设置
             </Text>
           </MenuItem>
         </Box>
@@ -101,7 +101,7 @@ const LobbyMenu = forwardRef<HTMLDivElement, LobbyMenuProps>(
                   aria-pressed={promptLeave}
                 >
                   <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-                    Leave Space
+                    离开空间
                   </Text>
                 </MenuItem>
                 {promptLeave && (
@@ -198,7 +198,7 @@ export function LobbyHeader({ showProfile, powerLevels }: LobbyHeaderProps) {
               offset={4}
               tooltip={
                 <Tooltip>
-                  <Text>Members</Text>
+                  <Text>成员</Text>
                 </Tooltip>
               }
             >
@@ -215,7 +215,7 @@ export function LobbyHeader({ showProfile, powerLevels }: LobbyHeaderProps) {
             offset={4}
             tooltip={
               <Tooltip>
-                <Text>More Options</Text>
+                <Text>更多选项</Text>
               </Tooltip>
             }
           >

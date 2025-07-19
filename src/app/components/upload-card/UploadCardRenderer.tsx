@@ -53,7 +53,7 @@ function ImagePreview({ fileItem, onSpoiler }: ImagePreviewProps) {
           before={<Icon src={Icons.EyeBlind} size="50" />}
           onClick={() => onSpoiler(!metadata.markedAsSpoiler)}
         >
-          <Text size="B300">Spoiler</Text>
+          <Text size="B300">剧透</Text>
         </Chip>
       </Box>
     </Box>
@@ -107,17 +107,17 @@ export function UploadCardRenderer({
             <Chip
               as="button"
               onClick={startUpload}
-              aria-label="Retry Upload"
+              aria-label="重试上传"
               variant="Critical"
               radii="Pill"
               outlined
             >
-              <Text size="B300">Retry</Text>
+              <Text size="B300">重试</Text>
             </Chip>
           )}
           <IconButton
             onClick={removeUpload}
-            aria-label="Cancel Upload"
+            aria-label="取消上传"
             variant="SurfaceVariant"
             radii="Pill"
             size="300"

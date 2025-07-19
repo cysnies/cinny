@@ -24,9 +24,9 @@ export const useNotificationModes = (): NotificationMode[] =>
 const useNotificationModeStr = (): Record<NotificationMode, string> =>
   useMemo(
     () => ({
-      [NotificationMode.OFF]: 'Disable',
-      [NotificationMode.Notify]: 'Notify Silent',
-      [NotificationMode.NotifyLoud]: 'Notify Loud',
+      [NotificationMode.OFF]: '关闭',
+      [NotificationMode.Notify]: '静音',
+      [NotificationMode.NotifyLoud]: '声音通知',
     }),
     []
   );

@@ -41,7 +41,7 @@ const renderErrorButton = (retry: () => void, text: string) => (
   <TooltipProvider
     tooltip={
       <Tooltip variant="Critical">
-        <Text>Failed to load file!</Text>
+        <Text>加载文件失败。</Text>
       </Tooltip>
     }
     position="Top"
@@ -129,7 +129,7 @@ export function ReadTextFile({ body, mimeType, url, encInfo, renderViewer }: Rea
         </Overlay>
       )}
       {textState.status === AsyncStatus.Error ? (
-        renderErrorButton(loadText, 'Open File')
+        renderErrorButton(loadText, '打开文件')
       ) : (
         <Button
           variant="Secondary"
@@ -149,7 +149,7 @@ export function ReadTextFile({ body, mimeType, url, encInfo, renderViewer }: Rea
           }
         >
           <Text size="B400" truncate>
-            Open File
+            打开文件
           </Text>
         </Button>
       )}
@@ -232,7 +232,7 @@ export function ReadPdfFile({ body, mimeType, url, encInfo, renderViewer }: Read
           }
         >
           <Text size="B400" truncate>
-            Open PDF
+            打开 PDF
           </Text>
         </Button>
       )}
@@ -265,7 +265,7 @@ export function DownloadFile({ body, mimeType, url, info, encInfo }: DownloadFil
   );
 
   return downloadState.status === AsyncStatus.Error ? (
-    renderErrorButton(download, `Retry Download (${bytesToSize(info.size ?? 0)})`)
+    renderErrorButton(download, `重试下载 (${bytesToSize(info.size ?? 0)})`)
   ) : (
     <Button
       variant="Secondary"
@@ -286,7 +286,7 @@ export function DownloadFile({ body, mimeType, url, info, encInfo }: DownloadFil
         )
       }
     >
-      <Text size="B400" truncate>{`Download (${bytesToSize(info.size ?? 0)})`}</Text>
+      <Text size="B400" truncate>{`下载 (${bytesToSize(info.size ?? 0)})`}</Text>
     </Button>
   );
 }

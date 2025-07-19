@@ -25,7 +25,7 @@ export function General({ requestClose }: GeneralProps) {
         <Box grow="Yes" gap="200">
           <Box grow="Yes" alignItems="Center" gap="200">
             <Text size="H3" truncate>
-              General
+              通用
             </Text>
           </Box>
           <Box shrink="No">
@@ -41,17 +41,17 @@ export function General({ requestClose }: GeneralProps) {
             <Box direction="Column" gap="700">
               <RoomProfile powerLevels={powerLevels} />
               <Box direction="Column" gap="100">
-                <Text size="L400">Options</Text>
+                <Text size="L400">选项</Text>
                 <RoomJoinRules powerLevels={powerLevels} />
                 <RoomPublish powerLevels={powerLevels} />
               </Box>
               <Box direction="Column" gap="100">
-                <Text size="L400">Addresses</Text>
+                <Text size="L400">地址</Text>
                 <RoomPublishedAddresses powerLevels={powerLevels} />
                 <RoomLocalAddresses powerLevels={powerLevels} />
               </Box>
               <Box direction="Column" gap="100">
-                <Text size="L400">Advance Options</Text>
+                <Text size="L400">高级选项</Text>
                 <RoomUpgrade powerLevels={powerLevels} requestClose={requestClose} />
               </Box>
             </Box>

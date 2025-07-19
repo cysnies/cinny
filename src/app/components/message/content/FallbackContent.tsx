@@ -9,9 +9,9 @@ export const MessageDeletedContent = as<'div', { children?: never; reason?: stri
     <Box as="span" alignItems="Center" gap="100" style={warningStyle} {...props} ref={ref}>
       <Icon size="50" src={Icons.Delete} />
       {reason ? (
-        <i>This message has been deleted. {reason}</i>
+        <i>这条消息因为 {reason} 已被删除。</i>
       ) : (
-        <i>This message has been deleted</i>
+        <i>这条消息已被删除。</i>
       )}
     </Box>
   )
@@ -20,42 +20,42 @@ export const MessageDeletedContent = as<'div', { children?: never; reason?: stri
 export const MessageUnsupportedContent = as<'div', { children?: never }>(({ ...props }, ref) => (
   <Box as="span" alignItems="Center" gap="100" style={criticalStyle} {...props} ref={ref}>
     <Icon size="50" src={Icons.Warning} />
-    <i>Unsupported message</i>
+    <i>不支持的消息</i>
   </Box>
 ));
 
 export const MessageFailedContent = as<'div', { children?: never }>(({ ...props }, ref) => (
   <Box as="span" alignItems="Center" gap="100" style={criticalStyle} {...props} ref={ref}>
     <Icon size="50" src={Icons.Warning} />
-    <i>Failed to load message</i>
+    <i>消息加载失败</i>
   </Box>
 ));
 
 export const MessageBadEncryptedContent = as<'div', { children?: never }>(({ ...props }, ref) => (
   <Box as="span" alignItems="Center" gap="100" style={warningStyle} {...props} ref={ref}>
     <Icon size="50" src={Icons.Lock} />
-    <i>Unable to decrypt message</i>
+    <i>消息解密失败</i>
   </Box>
 ));
 
 export const MessageNotDecryptedContent = as<'div', { children?: never }>(({ ...props }, ref) => (
   <Box as="span" alignItems="Center" gap="100" style={warningStyle} {...props} ref={ref}>
     <Icon size="50" src={Icons.Lock} />
-    <i>This message is not decrypted yet</i>
+    <i>这条消息还没有被加密</i>
   </Box>
 ));
 
 export const MessageBrokenContent = as<'div', { children?: never }>(({ ...props }, ref) => (
   <Box as="span" alignItems="Center" gap="100" style={criticalStyle} {...props} ref={ref}>
     <Icon size="50" src={Icons.Warning} />
-    <i>Broken message</i>
+    <i>损坏的消息</i>
   </Box>
 ));
 
 export const MessageEmptyContent = as<'div', { children?: never }>(({ ...props }, ref) => (
   <Box as="span" alignItems="Center" gap="100" style={criticalStyle} {...props} ref={ref}>
     <Icon size="50" src={Icons.Warning} />
-    <i>Empty message</i>
+    <i>空消息</i>
   </Box>
 ));
 

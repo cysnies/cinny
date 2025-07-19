@@ -182,11 +182,10 @@ function SetupVerification({ onComplete }: SetupVerificationProps) {
   return (
     <Box as="form" onSubmit={handleSubmit} direction="Column" gap="400">
       <Text size="T300">
-        Generate a <b>Recovery Key</b> for verifying identity if you do not have access to other
-        devices. Additionally, setup a passphrase as a memorable alternative.
+      如果您无法使用其他设备，请生成一个<b>恢复密钥</b>来验证身份。此外，推荐设置一个密码短语作为便于记忆的替代方式。
       </Text>
       <Box direction="Column" gap="100">
-        <Text size="L400">Passphrase (Optional)</Text>
+        <Text size="L400">密码短语（可选）</Text>
         <PasswordInput name="passphraseInput" size="400" readOnly={loading} />
       </Box>
       <Button
@@ -194,7 +193,7 @@ function SetupVerification({ onComplete }: SetupVerificationProps) {
         disabled={loading}
         before={loading && <Spinner size="200" variant="Primary" fill="Solid" />}
       >
-        <Text size="B400">Continue</Text>
+        <Text size="B400">继续</Text>
       </Button>
       {setupState.status === AsyncStatus.Error && (
         <Text size="T200" style={{ color: color.Critical.Main }}>
@@ -206,7 +205,7 @@ function SetupVerification({ onComplete }: SetupVerificationProps) {
           authData={nextAuthData ?? uiaAction.authData}
           unsupported={() => (
             <Text size="T200">
-              Authentication steps to perform this action are not supported by client.
+              客户端不支持执行此操作所需的认证步骤。
             </Text>
           )}
         >
@@ -246,11 +245,10 @@ function RecoveryKeyDisplay({ recoveryKey }: RecoveryKeyDisplayProps) {
   return (
     <Box direction="Column" gap="400">
       <Text size="T300">
-        Store the Recovery Key in a safe place for future use, as you will need it to verify your
-        identity if you do not have access to other devices.
+      将恢复密钥存储在安全的地方以备将来使用。如果无法使用其他设备，你将需要它来验证你的身份。
       </Text>
       <Box direction="Column" gap="100">
-        <Text size="L400">Recovery Key</Text>
+        <Text size="L400">恢复密钥</Text>
         <Box
           className={ContainerColor({ variant: 'SurfaceVariant' })}
           style={{
@@ -265,16 +263,16 @@ function RecoveryKeyDisplay({ recoveryKey }: RecoveryKeyDisplayProps) {
             {safeToDisplayKey}
           </Text>
           <Chip onClick={() => setShow(!show)} variant="Secondary" radii="Pill">
-            <Text size="B300">{show ? 'Hide' : 'Show'}</Text>
+            <Text size="B300">{show ? '隐藏' : '显示'}</Text>
           </Chip>
         </Box>
       </Box>
       <Box direction="Column" gap="200">
         <Button onClick={handleCopy}>
-          <Text size="B400">Copy</Text>
+          <Text size="B400">复制</Text>
         </Button>
         <Button onClick={handleDownload} fill="Soft">
-          <Text size="B400">Download</Text>
+          <Text size="B400">下载</Text>
         </Button>
       </Box>
     </Box>
@@ -299,7 +297,7 @@ export const DeviceVerificationSetup = forwardRef<HTMLDivElement, DeviceVerifica
           size="500"
         >
           <Box grow="Yes">
-            <Text size="H4">Setup Device Verification</Text>
+            <Text size="H4">配置设备验证</Text>
           </Box>
           <IconButton size="300" radii="300" onClick={onCancel}>
             <Icon src={Icons.Cross} />
@@ -334,7 +332,7 @@ export const DeviceVerificationReset = forwardRef<HTMLDivElement, DeviceVerifica
           size="500"
         >
           <Box grow="Yes">
-            <Text size="H4">Reset Device Verification</Text>
+            <Text size="H4">重置设备验证</Text>
           </Box>
           <IconButton size="300" radii="300" onClick={onCancel}>
             <Icon src={Icons.Cross} />
@@ -356,16 +354,14 @@ export const DeviceVerificationReset = forwardRef<HTMLDivElement, DeviceVerifica
           <Box style={{ padding: config.space.S400 }} direction="Column" gap="400">
             <Box direction="Column" gap="200">
               <Text size="H1">✋🧑‍🚒🤚</Text>
-              <Text size="T300">Resetting device verification is permanent.</Text>
+              <Text size="T300">重置设备验证是永久性的。</Text>
               <Text size="T300">
-                Anyone you have verified with will see security alerts and your encryption backup
-                will be lost. You almost certainly do not want to do this, unless you have lost{' '}
-                <b>Recovery Key</b> or <b>Recovery Passphrase</b> and every device you can verify
-                from.
+              任何你已验证过的人都会看到安全警报，而且你的加密备份将会丢失。你几乎肯定不想这么做，除非你已经丢失了来自你可用做验证的每一台设备的{' '}
+                <b>恢复密钥</b> 或 <b>恢复密码短语</b>。
               </Text>
             </Box>
             <Button variant="Critical" onClick={() => setReset(true)}>
-              <Text size="B400">Reset</Text>
+              <Text size="B400">重置</Text>
             </Button>
           </Box>
         )}

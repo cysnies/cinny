@@ -113,7 +113,7 @@ export function PermissionGroups({ powerLevels, permissionGroups }: PermissionGr
 
     return (
       <Box direction="Column" gap="100">
-        <Text size="L400">Users</Text>
+        <Text size="L400">用户</Text>
         <SequenceCard
           variant="SurfaceVariant"
           className={SequenceCardStyle}
@@ -121,8 +121,8 @@ export function PermissionGroups({ powerLevels, permissionGroups }: PermissionGr
           gap="400"
         >
           <SettingTile
-            title="Default Power"
-            description="Default power level for all users."
+            title="默认权限"
+            description="对于所有用户的默认权限。"
             after={
               <PowerSwitcher
                 powerLevelTags={powerLevelTags}
@@ -219,7 +219,7 @@ export function PermissionGroups({ powerLevels, permissionGroups }: PermissionGr
                           <Text size="B300" truncate>
                             {tag.name}
                           </Text>
-                          {value < maxPower && <Text size="T200">& Above</Text>}
+                          {value < maxPower && <Text size="T200">及以上</Text>}
                         </Chip>
                       )}
                     </PowerSwitcher>

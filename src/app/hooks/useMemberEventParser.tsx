@@ -40,9 +40,9 @@ export const useMemberEventParser = (): MemberEventParser => {
             body: (
               <>
                 <b>{senderName}</b>
-                {' accepted '}
+                {' 通过了 '}
                 <b>{userName}</b>
-                {`'s join request `}
+                {`的加入请求 `}
                 {reason}
               </>
             ),
@@ -54,7 +54,7 @@ export const useMemberEventParser = (): MemberEventParser => {
           body: (
             <>
               <b>{senderName}</b>
-              {' invited '}
+              {' 邀请了 '}
               <b>{userName}</b> {reason}
             </>
           ),
@@ -67,7 +67,7 @@ export const useMemberEventParser = (): MemberEventParser => {
           body: (
             <>
               <b>{userName}</b>
-              {' request to join room '}
+              {' 请求加入房间 '}
               {reason}
             </>
           ),
@@ -80,7 +80,7 @@ export const useMemberEventParser = (): MemberEventParser => {
           body: (
             <>
               <b>{userName}</b>
-              {' joined the room'}
+              {' 加入了房间'}
             </>
           ),
         };

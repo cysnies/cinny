@@ -39,7 +39,7 @@ export function RoomPublish({ powerLevels }: RoomPublishProps) {
       gap="400"
     >
       <SettingTile
-        title="Publish To Directory"
+        title="发布到房间列表"
         after={
           <Box gap="200" alignItems="Center">
             {loading && <Spinner variant="Secondary" />}

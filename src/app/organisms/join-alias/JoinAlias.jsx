@@ -75,7 +75,7 @@ function JoinAliasContent({ term, requestClose }) {
 
   return (
     <form className="join-alias" onSubmit={handleSubmit}>
-      <Input label="Address" value={term} name="alias" required autoFocus />
+      <Input label="地址" value={term} name="alias" required autoFocus />
       {error && (
         <Text className="join-alias__error" variant="b3">
           {error}
@@ -89,7 +89,7 @@ function JoinAliasContent({ term, requestClose }) {
           </>
         ) : (
           <Button variant="primary" type="submit">
-            Join
+            加入
           </Button>
         )}
       </div>
@@ -130,10 +130,10 @@ function JoinAlias() {
       isOpen={data !== null}
       title={
         <Text variant="s1" weight="medium" primary>
-          Join with address
+          通过地址加入
         </Text>
       }
-      contentOptions={<IconButton src={CrossIC} onClick={requestClose} tooltip="Close" />}
+      contentOptions={<IconButton src={CrossIC} onClick={requestClose} tooltip="关闭" />}
       onRequestClose={requestClose}
     >
       {data ? <JoinAliasContent term={data.term} requestClose={requestClose} /> : <div />}

@@ -23,19 +23,19 @@ export const useMemberSortMenu = (): MemberSortItem[] =>
   useMemo(
     () => [
       {
-        name: 'A to Z',
+        name: '从 A 到 Z',
         sortFn: MemberSort.Ascending,
       },
       {
-        name: 'Z to A',
+        name: '从 Z 到 A',
         sortFn: MemberSort.Descending,
       },
       {
-        name: 'Newest',
+        name: '最新的',
         sortFn: MemberSort.NewestFirst,
       },
       {
-        name: 'Oldest',
+        name: '最老的',
         sortFn: MemberSort.Oldest,
       },
     ],

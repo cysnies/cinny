@@ -107,7 +107,7 @@ function GlobalPackSelector({
       <Header size="400" variant="Surface" style={{ padding: `0 ${config.space.S300}` }}>
         <Box grow="Yes">
           <Text size="L400" truncate>
-            Room Packs
+            房间表情包
           </Text>
         </Box>
         <Box shrink="No">
@@ -162,7 +162,7 @@ function GlobalPackSelector({
                           addSelected(roomPackAddresses);
                         }}
                       >
-                        <Text size="B300">{allSelected ? 'Unselect All' : 'Select All'}</Text>
+                        <Text size="B300">{allSelected ? '全部取消选择' : '全部选择'}</Text>
                       </Chip>
                     </Box>
                   </Box>
@@ -184,7 +184,7 @@ function GlobalPackSelector({
                         gap="400"
                       >
                         <SettingTile
-                          title={pack.meta.name ?? 'Unknown'}
+                          title={pack.meta.name ?? '未知'}
                           description={<span className={LineClamp2}>{pack.meta.attribution}</span>}
                           before={
                             <Box alignItems="Center" gap="300">
@@ -232,10 +232,10 @@ function GlobalPackSelector({
                   }}
                 >
                   <Text size="H5" align="Center">
-                    No Packs
+                    没有表情包
                   </Text>
                   <Text size="T200" align="Center">
-                    Pack from rooms will appear here. You do not have any room with packs yet.
+                  来自房间的表情包将会出现在这里。你目前还没有任何带有表情包的房间。
                   </Text>
                 </Box>
               </SequenceCard>
@@ -408,7 +408,7 @@ export function GlobalPacks({ onViewPack }: GlobalPacksProps) {
                 outlined
                 onClick={() => onViewPack(pack)}
               >
-                <Text size="B300">View</Text>
+                <Text size="B300">查看</Text>
               </Button>
             )
           }
@@ -420,7 +420,7 @@ export function GlobalPacks({ onViewPack }: GlobalPacksProps) {
   return (
     <>
       <Box direction="Column" gap="100">
-        <Text size="L400">Favorite Packs</Text>
+        <Text size="L400">收藏的表情包</Text>
         <SequenceCard
           className={SequenceCardStyle}
           variant="SurfaceVariant"
@@ -428,8 +428,8 @@ export function GlobalPacks({ onViewPack }: GlobalPacksProps) {
           gap="400"
         >
           <SettingTile
-            title="Select Pack"
-            description="Pick emojis and stickers pack from rooms to use in all rooms."
+            title="选择表情包"
+            description="从房间中挑选表情符号和贴纸包以在所有房间使用。"
             after={
               <>
                 <Button
@@ -440,7 +440,7 @@ export function GlobalPacks({ onViewPack }: GlobalPacksProps) {
                   radii="300"
                   outlined
                 >
-                  <Text size="B300">Select</Text>
+                  <Text size="B300">选择</Text>
                 </Button>
                 <PopOut
                   anchor={menuCords}
@@ -502,11 +502,11 @@ export function GlobalPacks({ onViewPack }: GlobalPacksProps) {
             <Box grow="Yes" direction="Column">
               {applyState.status === AsyncStatus.Error ? (
                 <Text size="T200">
-                  <b>Failed to apply changes! Please try again.</b>
+                  <b>应用更改失败，请重试。</b>
                 </Text>
               ) : (
                 <Text size="T200">
-                  <b>Changes saved! Apply when ready.</b>
+                  <b>更改已保存。</b>
                 </Text>
               )}
             </Box>
@@ -529,7 +529,7 @@ export function GlobalPacks({ onViewPack }: GlobalPacksProps) {
                 before={applyingChanges && <Spinner variant="Success" fill="Solid" size="100" />}
                 onClick={applyChanges}
               >
-                <Text size="B300">Apply Changes</Text>
+                <Text size="B300">应用更改</Text>
               </Button>
             </Box>
           </Box>

@@ -267,7 +267,7 @@ export function StateEventEditor({ type, stateKey, requestClose }: StateEventEdi
               onClick={requestClose}
               before={<Icon size="100" src={Icons.ArrowLeft} />}
             >
-              <Text size="T300">Developer Tools</Text>
+              <Text size="T300">开发者工具</Text>
             </Chip>
           </Box>
           <Box shrink="No">

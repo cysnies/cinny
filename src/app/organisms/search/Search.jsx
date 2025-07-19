@@ -244,7 +244,7 @@ function Search() {
           }}
         >
           <RawIcon src={SearchIC} size="small" />
-          <Input onChange={handleOnChange} forwardRef={searchRef} placeholder="Search" />
+          <Input onChange={handleOnChange} forwardRef={searchRef} placeholder="搜索" />
           <IconButton size="small" src={CrossIC} type="reset" onClick={handleCross} tabIndex={-1} />
         </form>
         <div className="search-dialog__content-wrapper">
@@ -255,7 +255,7 @@ function Search() {
           </ScrollView>
         </div>
         <div className="search-dialog__footer">
-          <Text variant="b3">Type # for rooms, @ for DMs and * for spaces. Hotkey: Ctrl + k</Text>
+          <Text variant="b3">输入 # 来搜索房间，输入 @ 来搜索管理员，输入 * 来搜索空间。快捷键：Ctrl + K</Text>
         </div>
       </div>
     </RawModal>

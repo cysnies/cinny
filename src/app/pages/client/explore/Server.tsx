@@ -106,14 +106,14 @@ function Search({ active, loading, searchInputRef, onSearch, onReset }: SearchPr
   return (
     <Box as="form" direction="Column" gap="100" onSubmit={handleSearchSubmit}>
       <span data-spacing-node />
-      <Text size="L400">Search</Text>
+      <Text size="L400">搜索</Text>
       <Input
         ref={searchInputRef}
         style={{ paddingRight: config.space.S300 }}
         name="searchInput"
         size="500"
         variant="Background"
-        placeholder="Search for keyword"
+        placeholder="搜索关键字"
         before={
           active && loading ? (
             <Spinner variant="Secondary" size="200" />
@@ -132,11 +132,11 @@ function Search({ active, loading, searchInputRef, onSearch, onReset }: SearchPr
               after={<Icon size="50" src={Icons.Cross} />}
               onClick={onReset}
             >
-              <Text size="B300">Clear</Text>
+              <Text size="B300">清除</Text>
             </Chip>
           ) : (
             <Chip type="submit" variant="Primary" size="400" radii="Pill" outlined>
-              <Text size="B300">Enter</Text>
+              <Text size="B300">回车</Text>
             </Chip>
           )
         }
@@ -196,7 +196,7 @@ function ThirdPartyProtocolsSelector({
               style={{ padding: config.space.S100, minWidth: toRem(100) }}
             >
               <Text style={{ padding: config.space.S100 }} size="L400" truncate>
-                Protocols
+                协议
               </Text>
               <Box direction="Column">
                 <MenuItem
@@ -288,7 +288,7 @@ function LimitButton({ limit, onLimitChange }: LimitButtonProps) {
           <Menu variant="Surface">
             <Box direction="Column" gap="400" style={{ padding: config.space.S300 }}>
               <Box direction="Column" gap="100">
-                <Text size="L400">Presets</Text>
+                <Text size="L400">预设</Text>
                 <Box gap="100" wrap="Wrap">
                   <Chip variant="SurfaceVariant" onClick={() => setLimit('24')} radii="Pill">
                     <Text size="T200">24</Text>
@@ -318,7 +318,7 @@ function LimitButton({ limit, onLimitChange }: LimitButtonProps) {
                   />
                 </Box>
                 <Button type="submit" size="300" variant="Primary" radii="400">
-                  <Text size="B300">Change Limit</Text>
+                  <Text size="B300">修改限制</Text>
                 </Button>
               </Box>
             </Box>
@@ -488,7 +488,7 @@ export function PublicRooms() {
             <Box grow="No" justifyContent="Center" alignItems="Center" gap="200">
               {screenSize !== ScreenSize.Mobile && <Icon size="400" src={Icons.Search} />}
               <Text size="H3" truncate>
-                Search
+                搜索
               </Text>
             </Box>
             <Box grow="Yes" basis="No" />
@@ -534,7 +534,7 @@ export function PublicRooms() {
                     {isSearch ? (
                       <Text size="H4">{`Results for "${serverSearchParams.term}"`}</Text>
                     ) : (
-                      <Text size="H4">Popular Communities</Text>
+                      <Text size="H4">热门社区</Text>
                     )}
                     <Box gap="200">
                       {roomTypeFilters.map((filter) => (
@@ -624,7 +624,7 @@ export function PublicRooms() {
                               disabled={!data.prev_batch}
                             >
                               <Text size="B300" truncate>
-                                Previous Page
+                                上一页
                               </Text>
                             </Button>
                             <Box data-spacing-node grow="Yes" />
@@ -635,7 +635,7 @@ export function PublicRooms() {
                               disabled={!data.next_batch}
                             >
                               <Text size="B300" truncate>
-                                Next Page
+                                下一页
                               </Text>
                             </Button>
                           </Box>
@@ -651,7 +651,7 @@ export function PublicRooms() {
                       >
                         <Icon size="400" src={Icons.Info} />
                         <Text size="T300" align="Center">
-                          No communities found!
+                          找不到社区。
                         </Text>
                       </Box>
                     ))}

@@ -77,7 +77,7 @@ const DirectMenu = forwardRef<HTMLDivElement, DirectMenuProps>(({ requestClose }
           aria-disabled={!unread}
         >
           <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-            Mark as Read
+            标记为已读
           </Text>
         </MenuItem>
       </Box>
@@ -102,7 +102,7 @@ function DirectHeader() {
         <Box alignItems="Center" grow="Yes" gap="300">
           <Box grow="Yes">
             <Text size="H4" truncate>
-              Direct Messages
+              私聊消息
             </Text>
           </Box>
           <Box>
@@ -144,18 +144,18 @@ function DirectEmpty() {
         icon={<Icon size="600" src={Icons.Mention} />}
         title={
           <Text size="H5" align="Center">
-            No Direct Messages
+            没有私聊消息
           </Text>
         }
         content={
           <Text size="T300" align="Center">
-            You do not have any direct messages yet.
+            你还没有任何私聊消息。
           </Text>
         }
         options={
           <Button variant="Secondary" size="300" onClick={() => openInviteUser()}>
             <Text size="B300" truncate>
-              Direct Message
+              私聊消息
             </Text>
           </Button>
         }
@@ -214,7 +214,7 @@ export function Direct() {
                       </Avatar>
                       <Box as="span" grow="Yes">
                         <Text as="span" size="Inherit" truncate>
-                          Create Chat
+                          发起聊天
                         </Text>
                       </Box>
                     </Box>
@@ -229,7 +229,7 @@ export function Direct() {
                   data-category-id={DEFAULT_CATEGORY_ID}
                   onClick={handleCategoryClick}
                 >
-                  Chats
+                  聊天
                 </RoomNavCategoryButton>
               </NavCategoryHeader>
               <div

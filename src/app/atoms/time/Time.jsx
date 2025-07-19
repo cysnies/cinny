@@ -18,7 +18,7 @@ function Time({ timestamp, fullTime }) {
 
     formattedDate = dateFormat(date, isToday || isYesterday ? 'hh:MM TT' : 'dd/mm/yyyy');
     if (isYesterday) {
-      formattedDate = `Yesterday, ${formattedDate}`;
+      formattedDate = `昨天, ${formattedDate}`;
     }
   }
 

@@ -52,7 +52,7 @@ export function CompactUploadCardRenderer({
               radii="Pill"
               outlined
             >
-              <Text size="B300">Retry</Text>
+              <Text size="B300">重试</Text>
             </Chip>
           )}
           <IconButton

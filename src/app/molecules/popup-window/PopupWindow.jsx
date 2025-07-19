@@ -70,7 +70,7 @@ function PopupWindow({
                 size="small"
                 src={ChevronLeftIC}
                 onClick={onRequestClose}
-                tooltip="Back"
+                tooltip="返回"
               />
               <TitleWrapper>
                 {typeof title === 'string' ? (

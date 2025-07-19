@@ -53,21 +53,21 @@ function EmailNotification() {
 
   return (
     <SettingTile
-      title="Email Notification"
+      title="邮件通知"
       description={
         <>
           {result && !result.email && (
             <Text as="span" style={{ color: color.Critical.Main }} size="T200">
-              Your account does not have any email attached.
+              你的账号没有绑定任何邮箱。
             </Text>
           )}
-          {result && result.email && <>Send notification to your email. {`("${result.email}")`}</>}
+          {result && result.email && <>向你的邮箱发送通知。 {`("${result.email}")`}</>}
           {result === null && (
             <Text as="span" style={{ color: color.Critical.Main }} size="T200">
-              Unexpected Error!
+              非预期的错误！
             </Text>
           )}
-          {result === undefined && 'Send notification to your email.'}
+          {result === undefined && '已经向你的邮箱发送了通知。'}
         </>
       }
       after={
@@ -98,7 +98,7 @@ export function SystemNotification() {
 
   return (
     <Box direction="Column" gap="100">
-      <Text size="L400">System</Text>
+      <Text size="L400">系统</Text>
       <SequenceCard
         className={SequenceCardStyle}
         variant="SurfaceVariant"
@@ -106,22 +106,22 @@ export function SystemNotification() {
         gap="400"
       >
         <SettingTile
-          title="Desktop Notifications"
+          title="桌面通知"
           description={
             notifPermission === 'denied' ? (
               <Text as="span" style={{ color: color.Critical.Main }} size="T200">
                 {'Notification' in window
-                  ? 'Notification permission is blocked. Please allow notification permission from browser address bar.'
-                  : 'Notifications are not supported by the system.'}
+                  ? '没有通知权限。请在你的浏览器中允许通知权限。'
+                  : '你的系统不支持通知。'}
               </Text>
             ) : (
-              <span>Show desktop notifications when message arrive.</span>
+              <span>当收到消息时，在桌面上显示一条通知。</span>
             )
           }
           after={
             notifPermission === 'prompt' ? (
               <Button size="300" radii="300" onClick={requestNotificationPermission}>
-                <Text size="B300">Enable</Text>
+                <Text size="B300">启用</Text>
               </Button>
             ) : (
               <Switch
@@ -140,8 +140,8 @@ export function SystemNotification() {
         gap="400"
       >
         <SettingTile
-          title="Notification Sound"
-          description="Play sound when new message arrive."
+          title="通知声音"
+          description="当收到新消息时播放声音。"
           after={<Switch value={isNotificationSounds} onChange={setIsNotificationSounds} />}
         />
       </SequenceCard>

@@ -150,8 +150,8 @@ export function MembersDrawer({ room, members }: MembersDrawerProps) {
       <Header className={css.MembersDrawerHeader} variant="Background" size="600">
         <Box grow="Yes" alignItems="Center" gap="200">
           <Box grow="Yes" alignItems="Center" gap="200">
-            <Text title={`${room.getJoinedMemberCount()} Members`} size="H5" truncate>
-              {`${millify(room.getJoinedMemberCount())} Members`}
+            <Text title={`${room.getJoinedMemberCount()} 位成员`} size="H5" truncate>
+              {`${millify(room.getJoinedMemberCount())} 位成员`}
             </Text>
           </Box>
           <Box shrink="No" alignItems="Center">
@@ -161,7 +161,7 @@ export function MembersDrawer({ room, members }: MembersDrawerProps) {
               offset={4}
               tooltip={
                 <Tooltip>
-                  <Text>Close</Text>
+                  <Text>关闭</Text>
                 </Tooltip>
               }
             >
@@ -253,7 +253,7 @@ export function MembersDrawer({ room, members }: MembersDrawerProps) {
                   ref={searchInputRef}
                   onChange={handleSearchChange}
                   style={{ paddingRight: config.space.S200 }}
-                  placeholder="Type name..."
+                  placeholder="输入名字..."
                   variant="Surface"
                   size="400"
                   radii="400"

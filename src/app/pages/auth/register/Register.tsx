@@ -36,21 +36,21 @@ export function Register() {
   return (
     <Box direction="Column" gap="500">
       <Text size="H2" priority="400">
-        Register
+        注册
       </Text>
       {registerFlows.status === RegisterFlowStatus.RegistrationDisabled && !sso && (
         <Text style={{ color: color.Critical.Main }} size="T300">
-          Registration has been disabled on this homeserver.
+          服务器已禁止新用户注册。
         </Text>
       )}
       {registerFlows.status === RegisterFlowStatus.RateLimited && !sso && (
         <Text style={{ color: color.Critical.Main }} size="T300">
-          You have been rate-limited! Please try after some time.
+          你达到了速率限制。请稍后再试。
         </Text>
       )}
       {registerFlows.status === RegisterFlowStatus.InvalidRequest && !sso && (
         <Text style={{ color: color.Critical.Main }} size="T300">
-          Invalid Request! Failed to get any registration options.
+          无效的请求。未能获取任何注册选项。
         </Text>
       )}
       {registerFlows.status === RegisterFlowStatus.FlowRequired && (
@@ -62,7 +62,7 @@ export function Register() {
             {(supportedFlows) =>
               supportedFlows.length === 0 ? (
                 <Text style={{ color: color.Critical.Main }} size="T300">
-                  This application does not support registration on this homeserver.
+                  在这个服务器上的应用不支持注册。
                 </Text>
               ) : (
                 <PasswordRegisterForm
@@ -91,7 +91,7 @@ export function Register() {
         </>
       )}
       <Text align="Center">
-        Already have an account? <Link to={getLoginPath(server)}>Login</Link>
+        已有帐号? <Link to={getLoginPath(server)}>去登录</Link>
       </Text>
     </Box>
   );

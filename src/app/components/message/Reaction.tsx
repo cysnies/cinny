@@ -59,9 +59,9 @@ export function ReactionTooltipMsg({ room, reaction, events }: ReactionTooltipMs
     reaction;
   const names = events.map(
     (ev: MatrixEvent) =>
-      getMemberDisplayName(room, ev.getSender() ?? 'Unknown') ??
-      getMxIdLocalPart(ev.getSender() ?? 'Unknown') ??
-      'Unknown'
+      getMemberDisplayName(room, ev.getSender() ?? '未知') ??
+      getMxIdLocalPart(ev.getSender() ?? '未知') ??
+      '未知'
   );
 
   return (
@@ -103,7 +103,7 @@ export function ReactionTooltipMsg({ room, reaction, events }: ReactionTooltipMs
           <Text as="span" size="Inherit" priority="300">
             {' and '}
           </Text>
-          <b>{names.length - 3} others</b>
+          <b>{names.length - 3} 其他</b>
         </>
       )}
       <Text as="span" size="Inherit" priority="300">

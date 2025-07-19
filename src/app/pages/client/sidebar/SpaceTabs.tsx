@@ -152,7 +152,7 @@ const SpaceMenu = forwardRef<HTMLDivElement, SpaceMenuProps>(
             disabled={!unread}
           >
             <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-              Mark as Read
+              标记为已读
             </Text>
           </MenuItem>
           {onUnpin && (
@@ -163,7 +163,7 @@ const SpaceMenu = forwardRef<HTMLDivElement, SpaceMenuProps>(
               after={<Icon size="100" src={Icons.Pin} />}
             >
               <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-                Unpin
+                取消置顶
               </Text>
             </MenuItem>
           )}
@@ -180,7 +180,7 @@ const SpaceMenu = forwardRef<HTMLDivElement, SpaceMenuProps>(
             disabled={!canInvite}
           >
             <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-              Invite
+              邀请
             </Text>
           </MenuItem>
           <MenuItem
@@ -190,7 +190,7 @@ const SpaceMenu = forwardRef<HTMLDivElement, SpaceMenuProps>(
             radii="300"
           >
             <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-              Copy Link
+              复制链接
             </Text>
           </MenuItem>
           <MenuItem
@@ -200,7 +200,7 @@ const SpaceMenu = forwardRef<HTMLDivElement, SpaceMenuProps>(
             radii="300"
           >
             <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-              Space Settings
+              空间设置
             </Text>
           </MenuItem>
         </Box>
@@ -541,7 +541,7 @@ function ClosedSpaceFolder({
   const dropType = dropState?.type;
 
   const tooltipName =
-    folder.name ?? folder.content.map((i) => mx.getRoom(i)?.name ?? '').join(', ') ?? 'Unnamed';
+    folder.name ?? folder.content.map((i) => mx.getRoom(i)?.name ?? '').join(', ') ?? '未命名';
 
   return (
     <RoomsUnreadProvider rooms={folder.content}>

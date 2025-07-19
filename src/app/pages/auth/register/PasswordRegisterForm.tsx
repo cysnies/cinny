@@ -259,7 +259,7 @@ export function PasswordRegisterForm({
       <Box as="form" onSubmit={handleSubmit} direction="Inherit" gap="400">
         <Box direction="Column" gap="100">
           <Text as="label" size="L400" priority="300">
-            Username
+            用户名
           </Text>
           <Input
             variant="Background"
@@ -284,7 +284,7 @@ export function PasswordRegisterForm({
             <>
               <Box direction="Column" gap="100">
                 <Text as="label" size="L400" priority="300">
-                  Password
+                  密码
                 </Text>
                 <PasswordInput
                   ref={passRef}
@@ -314,7 +314,7 @@ export function PasswordRegisterForm({
               </Box>
               <Box direction="Column" gap="100">
                 <Text as="label" size="L400" priority="300">
-                  Confirm Password
+                  确认密码
                 </Text>
                 <PasswordInput
                   ref={confPassRef}

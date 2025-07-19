@@ -91,7 +91,7 @@ function InviteNotifications() {
       const noti = new window.Notification('Invitation', {
         icon: LogoSVG,
         badge: LogoSVG,
-        body: `You have ${count} new invitation request.`,
+        body: `你收到 ${count} 条新的邀请信息。`,
         silent: true,
       });
 
@@ -156,7 +156,7 @@ function MessageNotifications() {
       const noti = new window.Notification(roomName, {
         icon: roomAvatar,
         badge: roomAvatar,
-        body: `New inbox notification from ${username}`,
+        body: `你收到一条来自 ${username} 的消息`,
         silent: true,
       });
 

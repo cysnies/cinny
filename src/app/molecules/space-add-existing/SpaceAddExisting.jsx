@@ -67,7 +67,7 @@ function SpaceAddExistingContent({ roomId, spaces: onlySpaces }) {
   };
 
   const handleAdd = async () => {
-    setProcess(`Adding ${selected.length} items...`);
+    setProcess(`正在添加 ${selected.length} 个项目...`);
 
     await rateLimitedActions(selected, async (rId) => {
       const room = mx.getRoom(rId);
@@ -127,7 +127,7 @@ function SpaceAddExistingContent({ roomId, spaces: onlySpaces }) {
         }}
       >
         <RawIcon size="small" src={SearchIC} />
-        <Input name="searchInput" onChange={handleSearch} placeholder="Search room" autoFocus />
+        <Input name="searchInput" onChange={handleSearch} placeholder="搜索房间" autoFocus />
         <IconButton size="small" type="button" onClick={handleSearchClear} src={CrossIC} />
       </form>
       {searchIds?.length === 0 && <Text>No results found</Text>}
@@ -177,7 +177,7 @@ function SpaceAddExistingContent({ roomId, spaces: onlySpaces }) {
           <Text weight="medium">{process || `${selected.length} item selected`}</Text>
           {!process && (
             <Button onClick={handleAdd} variant="primary">
-              Add
+              添加
             </Button>
           )}
         </div>
@@ -224,11 +224,11 @@ function SpaceAddExisting() {
           {room && room.name}
           <span style={{ color: 'var(--tc-surface-low)' }}>
             {' '}
-            — add existing {data?.spaces ? 'spaces' : 'rooms'}
+            — 添加已存在的 {data?.spaces ? '空间' : '房间'}
           </span>
         </Text>
       }
-      contentOptions={<IconButton src={CrossIC} onClick={requestClose} tooltip="Close" />}
+      contentOptions={<IconButton src={CrossIC} onClick={requestClose} tooltip="关闭" />}
       onRequestClose={requestClose}
     >
       {room ? <SpaceAddExistingContent roomId={room.roomId} spaces={data.spaces} /> : <div />}

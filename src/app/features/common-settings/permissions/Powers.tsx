@@ -119,8 +119,8 @@ export function Powers({ powerLevels, permissionGroups, onEdit }: PowersProps) {
         gap="400"
       >
         <SettingTile
-          title="Power Levels"
-          description="Manage and customize incremental power levels for users."
+          title="权限等级"
+          description="为用户管理和定制递增权限级别。"
           after={
             onEdit && (
               <Box gap="200">
@@ -132,7 +132,7 @@ export function Powers({ powerLevels, permissionGroups, onEdit }: PowersProps) {
                   outlined
                   onClick={onEdit}
                 >
-                  <Text size="B300">Edit</Text>
+                  <Text size="B300">编辑</Text>
                 </Button>
               </Box>
             )

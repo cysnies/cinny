@@ -15,7 +15,7 @@ export const Time = as<'span', TimeProps & ComponentProps<typeof Text>>(
     } else if (today(ts)) {
       time = timeHourMinute(ts);
     } else if (yesterday(ts)) {
-      time = `Yesterday ${timeHourMinute(ts)}`;
+      time = `昨天 ${timeHourMinute(ts)}`;
     } else {
       time = `${timeDayMonYear(ts)} ${timeHourMinute(ts)}`;
     }

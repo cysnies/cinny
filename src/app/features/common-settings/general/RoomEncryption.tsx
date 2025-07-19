@@ -73,16 +73,16 @@ export function RoomEncryption({ powerLevels }: RoomEncryptionProps) {
       gap="400"
     >
       <SettingTile
-        title="Room Encryption"
+        title="房间加密"
         description={
           enabled
-            ? 'Messages in this room are protected by end-to-end encryption.'
-            : 'Once enabled, encryption cannot be disabled!'
+            ? '这个房间里的消息受到端到端加密的保护。'
+            : '房间加密一旦启用，就无法禁用。'
         }
         after={
           enabled ? (
             <Badge size="500" variant="Success" fill="Solid" radii="300">
-              <Text size="L400">Enabled</Text>
+              <Text size="L400">启用</Text>
             </Badge>
           ) : (
             <Button
@@ -125,7 +125,7 @@ export function RoomEncryption({ powerLevels }: RoomEncryptionProps) {
                     size="500"
                   >
                     <Box grow="Yes">
-                      <Text size="H4">Enable Encryption</Text>
+                      <Text size="H4">启用加密</Text>
                     </Box>
                     <IconButton size="300" onClick={() => setPrompt(false)} radii="300">
                       <Icon src={Icons.Cross} />
@@ -133,10 +133,10 @@ export function RoomEncryption({ powerLevels }: RoomEncryptionProps) {
                   </Header>
                   <Box style={{ padding: config.space.S400 }} direction="Column" gap="400">
                     <Text priority="400">
-                      Are you sure? Once enabled, encryption cannot be disabled!
+                      你确定吗？一旦启用，加密就无法关闭！
                     </Text>
                     <Button type="submit" variant="Primary" onClick={handleEnable}>
-                      <Text size="B400">Enable E2E Encryption</Text>
+                      <Text size="B400">启用端到端加密</Text>
                     </Button>
                   </Box>
                 </Dialog>

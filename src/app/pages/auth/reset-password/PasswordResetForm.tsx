@@ -56,7 +56,7 @@ function ResetPasswordComplete({ email }: { email?: string }) {
           <Dialog>
             <Box style={{ padding: config.space.S400 }} direction="Column" gap="400">
               <Text>
-                Password has been reset successfully. Please login with your new password.
+                密码重置成功。请使用新密码登录。
               </Text>
               <Button variant="Primary" onClick={handleClick}>
                 <Text size="B400" as="span">
@@ -167,11 +167,11 @@ export function PasswordResetForm({ defaultEmail }: PasswordResetFormProps) {
   return (
     <Box as="form" onSubmit={handleSubmit} direction="Inherit" gap="400">
       <Text size="T300" priority="400">
-        Homeserver <strong>{server}</strong> will send you an email to let you reset your password.
+        家服务器 <strong>{server}</strong> 将会向你发送一封邮件以重置密码，请检查你的邮箱。
       </Text>
       <Box direction="Column" gap="100">
         <Text as="label" size="L400" priority="300">
-          Email
+          邮箱
         </Text>
         <Input
           defaultValue={defaultEmail}
@@ -193,7 +193,7 @@ export function PasswordResetForm({ defaultEmail }: PasswordResetFormProps) {
           <>
             <Box direction="Column" gap="100">
               <Text as="label" size="L400" priority="300">
-                New Password
+                新密码
               </Text>
               <PasswordInput
                 ref={passRef}
@@ -207,7 +207,7 @@ export function PasswordResetForm({ defaultEmail }: PasswordResetFormProps) {
             </Box>
             <Box direction="Column" gap="100">
               <Text as="label" size="L400" priority="300">
-                Confirm Password
+                确认密码
               </Text>
               <PasswordInput
                 ref={confPassRef}
@@ -233,7 +233,7 @@ export function PasswordResetForm({ defaultEmail }: PasswordResetFormProps) {
       <span data-spacing-node />
       <Button type="submit" variant="Primary" size="500">
         <Text as="span" size="B500">
-          Reset Password
+          重置密码
         </Text>
       </Button>
 

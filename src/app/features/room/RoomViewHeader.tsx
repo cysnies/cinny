@@ -118,7 +118,7 @@ const RoomMenu = forwardRef<HTMLDivElement, RoomMenuProps>(({ room, requestClose
           disabled={!unread}
         >
           <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-            Mark as Read
+            标记为已读
           </Text>
         </MenuItem>
         <RoomNotificationModeSwitcher roomId={room.roomId} value={notificationMode}>
@@ -137,7 +137,7 @@ const RoomMenu = forwardRef<HTMLDivElement, RoomMenuProps>(({ room, requestClose
               onClick={handleOpen}
             >
               <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-                Notifications
+                通知
               </Text>
             </MenuItem>
           )}
@@ -155,7 +155,7 @@ const RoomMenu = forwardRef<HTMLDivElement, RoomMenuProps>(({ room, requestClose
           disabled={!canInvite}
         >
           <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-            Invite
+            邀请
           </Text>
         </MenuItem>
         <MenuItem
@@ -165,7 +165,7 @@ const RoomMenu = forwardRef<HTMLDivElement, RoomMenuProps>(({ room, requestClose
           radii="300"
         >
           <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-            Copy Link
+            复制链接
           </Text>
         </MenuItem>
         <MenuItem
@@ -175,7 +175,7 @@ const RoomMenu = forwardRef<HTMLDivElement, RoomMenuProps>(({ room, requestClose
           radii="300"
         >
           <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-            Room Settings
+            房间设置
           </Text>
         </MenuItem>
         <UseStateProvider initial={false}>
@@ -189,7 +189,7 @@ const RoomMenu = forwardRef<HTMLDivElement, RoomMenuProps>(({ room, requestClose
                 aria-pressed={promptJump}
               >
                 <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-                  Jump to Time
+                  跳转到时间
                 </Text>
               </MenuItem>
               {promptJump && (
@@ -221,7 +221,7 @@ const RoomMenu = forwardRef<HTMLDivElement, RoomMenuProps>(({ room, requestClose
                 aria-pressed={promptLeave}
               >
                 <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-                  Leave Room
+                  离开房间
                 </Text>
               </MenuItem>
               {promptLeave && (
@@ -361,7 +361,7 @@ export function RoomViewHeader() {
               offset={4}
               tooltip={
                 <Tooltip>
-                  <Text>Search</Text>
+                  <Text>搜索</Text>
                 </Tooltip>
               }
             >
@@ -377,7 +377,7 @@ export function RoomViewHeader() {
             offset={4}
             tooltip={
               <Tooltip>
-                <Text>Pinned Messages</Text>
+                <Text>置顶消息</Text>
               </Tooltip>
             }
           >
@@ -434,7 +434,7 @@ export function RoomViewHeader() {
               offset={4}
               tooltip={
                 <Tooltip>
-                  <Text>Members</Text>
+                  <Text>成员</Text>
                 </Tooltip>
               }
             >
@@ -451,7 +451,7 @@ export function RoomViewHeader() {
             offset={4}
             tooltip={
               <Tooltip>
-                <Text>More Options</Text>
+                <Text>更多选项</Text>
               </Tooltip>
             }
           >

@@ -104,7 +104,7 @@ export function OtherDevices({ devices, refreshDeviceList, showVerification }: O
   return devices.length > 0 ? (
     <>
       <Box direction="Column" gap="100">
-        <Text size="L400">Others</Text>
+        <Text size="L400">其他</Text>
         {authMetadata && (
           <SequenceCard
             className={SequenceCardStyle}
@@ -124,7 +124,7 @@ export function OtherDevices({ devices, refreshDeviceList, showVerification }: O
                   outlined
                   onClick={handleDashboardOIDC}
                 >
-                  <Text size="B300">Open</Text>
+                  <Text size="B300">打开</Text>
                 </Button>
               }
             />
@@ -198,11 +198,11 @@ export function OtherDevices({ devices, refreshDeviceList, showVerification }: O
             <Box grow="Yes" direction="Column">
               {deleteError ? (
                 <Text size="T200">
-                  <b>Failed to logout devices! Please try again. {deleteError.message}</b>
+                  <b>退出登录设备失败，请重试。{deleteError.message}</b>
                 </Text>
               ) : (
                 <Text size="T200">
-                  <b>Logout from selected devices. ({deleted.size} selected)</b>
+                  <b>已从所选的 ({deleted.size} 个设备退出登录。)</b>
                 </Text>
               )}
               {authData && (
@@ -210,7 +210,7 @@ export function OtherDevices({ devices, refreshDeviceList, showVerification }: O
                   authData={authData}
                   unsupported={() => (
                     <Text size="T200">
-                      Authentication steps to perform this action are not supported by client.
+                      客户端不支持执行此操作所需的认证步骤。
                     </Text>
                   )}
                 >
@@ -244,7 +244,7 @@ export function OtherDevices({ devices, refreshDeviceList, showVerification }: O
                 before={deleting && <Spinner variant="Critical" fill="Solid" size="100" />}
                 onClick={() => deleteDevices()}
               >
-                <Text size="B300">Logout</Text>
+                <Text size="B300">退出登录</Text>
               </Button>
             </Box>
           </Box>

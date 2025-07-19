@@ -176,7 +176,7 @@ export const MessageAllReactionItem = as<
         aria-pressed={open}
       >
         <Text className={css.MessageMenuItemText} as="span" size="T300" truncate>
-          View Reactions
+          显示反应
         </Text>
       </MenuItem>
     </>
@@ -226,7 +226,7 @@ export const MessageReadReceiptItem = as<
         aria-pressed={open}
       >
         <Text className={css.MessageMenuItemText} as="span" size="T300" truncate>
-          Read Receipts
+          阅读状态
         </Text>
       </MenuItem>
     </>
@@ -309,7 +309,7 @@ export const MessageSourceCodeItem = as<
         aria-pressed={open}
       >
         <Text className={css.MessageMenuItemText} as="span" size="T300" truncate>
-          View Source
+          查看源代码
         </Text>
       </MenuItem>
     </>
@@ -345,7 +345,7 @@ export const MessageCopyLinkItem = as<
       ref={ref}
     >
       <Text className={css.MessageMenuItemText} as="span" size="T300" truncate>
-        Copy Link
+        复制链接
       </Text>
     </MenuItem>
   );
@@ -452,7 +452,7 @@ export const MessageDeleteItem = as<
                 size="500"
               >
                 <Box grow="Yes">
-                  <Text size="H4">Delete Message</Text>
+                  <Text size="H4">删除消息</Text>
                 </Box>
                 <IconButton size="300" onClick={handleClose} radii="300">
                   <Icon src={Icons.Cross} />
@@ -466,7 +466,7 @@ export const MessageDeleteItem = as<
                 gap="400"
               >
                 <Text priority="400">
-                  This action is irreversible! Are you sure that you want to delete this message?
+                  该操作不可逆。你确定要删除这条消息吗？
                 </Text>
                 <Box direction="Column" gap="100">
                   <Text size="L400">
@@ -478,7 +478,7 @@ export const MessageDeleteItem = as<
                   <Input name="reasonInput" variant="Background" />
                   {deleteState.status === AsyncStatus.Error && (
                     <Text style={{ color: color.Critical.Main }} size="T300">
-                      Failed to delete message! Please try again.
+                      删除消息失败，请重试。
                     </Text>
                   )}
                 </Box>
@@ -582,7 +582,7 @@ export const MessageReportItem = as<
                 size="500"
               >
                 <Box grow="Yes">
-                  <Text size="H4">Report Message</Text>
+                  <Text size="H4">举报消息</Text>
                 </Box>
                 <IconButton size="300" onClick={handleClose} radii="300">
                   <Icon src={Icons.Cross} />
@@ -596,20 +596,19 @@ export const MessageReportItem = as<
                 gap="400"
               >
                 <Text priority="400">
-                  Report this message to server, which may then notify the appropriate people to
-                  take action.
+                  向服务器举报这条消息，让合适的人员对此做出处置。
                 </Text>
                 <Box direction="Column" gap="100">
                   <Text size="L400">Reason</Text>
                   <Input name="reasonInput" variant="Background" required />
                   {reportState.status === AsyncStatus.Error && (
                     <Text style={{ color: color.Critical.Main }} size="T300">
-                      Failed to report message! Please try again.
+                      举报消息失败，请重试。
                     </Text>
                   )}
                   {reportState.status === AsyncStatus.Success && (
                     <Text style={{ color: color.Success.Main }} size="T300">
-                      Message has been reported to server.
+                      这条消息已被举报。
                     </Text>
                   )}
                 </Box>
@@ -647,7 +646,7 @@ export const MessageReportItem = as<
         ref={ref}
       >
         <Text className={css.MessageMenuItemText} as="span" size="T300" truncate>
-          Report
+          举报
         </Text>
       </Button>
     </>
@@ -970,7 +969,7 @@ export const Message = as<'div', MessageProps>(
                                 size="T300"
                                 truncate
                               >
-                                Add Reaction
+                                添加反应
                               </Text>
                             </MenuItem>
                           )}
@@ -997,7 +996,7 @@ export const Message = as<'div', MessageProps>(
                               size="T300"
                               truncate
                             >
-                              Reply
+                              回复
                             </Text>
                           </MenuItem>
                           {canEditEvent(mx, mEvent) && onEditId && (
@@ -1017,7 +1016,7 @@ export const Message = as<'div', MessageProps>(
                                 size="T300"
                                 truncate
                               >
-                                Edit Message
+                                编辑消息
                               </Text>
                             </MenuItem>
                           )}

@@ -92,7 +92,7 @@ export function Login() {
         </>
       )}
       <Text align="Center">
-        Do not have an account? <Link to={getRegisterPath(server)}>Register</Link>
+        还没有账号？ <Link to={getRegisterPath(server)}>去注册</Link>
       </Text>
     </Box>
   );

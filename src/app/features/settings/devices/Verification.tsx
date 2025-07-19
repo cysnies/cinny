@@ -76,21 +76,21 @@ export function VerificationStatusBadge({
 function LearnStartVerificationFromOtherDevice() {
   return (
     <Box direction="Column">
-      <Text size="T200">Steps to verify from other device.</Text>
+      <Text size="T200">从其他设备验证的步骤。</Text>
       <Text as="div" size="T200">
         <ul style={{ margin: `${config.space.S100} 0` }}>
-          <li>Open your other verified device.</li>
+          <li>打开你其他已验证的设备。</li>
           <li>
-            Open <i>Settings</i>.
+            打开 <i>设置</i>.
           </li>
           <li>
-            Find this device in <i>Devices/Sessions</i> section.
+            在“设备/会话”部分找到这个设备
           </li>
-          <li>Initiate verification.</li>
+          <li>开始验证。</li>
         </ul>
       </Text>
       <Text size="T200">
-        If you do not have any verified device press the <i>&quot;Verify Manually&quot;</i> button.
+        如果你没有任何已验证的设备，请点击<i>“手动验证”</i>按钮。
       </Text>
     </Box>
   );
@@ -116,9 +116,9 @@ export function VerifyCurrentDeviceTile({
         title="Unverified"
         description={
           <>
-            Start verification from other device or verify manually.{' '}
+            从其他设备开始验证，或者手动验证。{' '}
             <Text as="a" size="T200" onClick={() => setLearnMore(!learnMore)}>
-              <b>{learnMore ? 'View Less' : 'Learn More'}</b>
+              <b>{learnMore ? '显示更少' : '显示更多'}</b>
             </Text>
           </>
         }
@@ -133,7 +133,7 @@ export function VerifyCurrentDeviceTile({
               onClick={() => setManualVerification(true)}
             >
               <Text as="span" size="B300">
-                Verify Manually
+                手动验证
               </Text>
             </Button>
           )
@@ -202,7 +202,7 @@ export function VerifyOtherDeviceTile({ crypto, deviceId }: VerifyOtherDeviceTil
           disabled={requesting}
         >
           <Text as="span" size="B300">
-            Verify
+            验证
           </Text>
         </Button>
       }
@@ -230,7 +230,7 @@ export function EnableVerification({ visible }: EnableVerificationProps) {
       {visible && (
         <Button size="300" radii="300" onClick={() => setOpen(true)}>
           <Text as="span" size="B300">
-            Enable
+            启用
           </Text>
         </Button>
       )}
@@ -324,7 +324,7 @@ export function DeviceVerificationOptions() {
                   fill="None"
                 >
                   <Text as="span" size="T300" truncate>
-                    Reset
+                    重置
                   </Text>
                 </MenuItem>
               </Box>

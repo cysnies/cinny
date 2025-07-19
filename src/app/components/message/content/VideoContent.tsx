@@ -129,7 +129,7 @@ export const VideoContent = as<'div', VideoContentProps>(
               onClick={loadSrc}
               before={<Icon size="Inherit" src={Icons.Play} filled />}
             >
-              <Text size="B300">Watch</Text>
+              <Text size="B300">观看</Text>
             </Button>
           </Box>
         )}
@@ -156,7 +156,7 @@ export const VideoContent = as<'div', VideoContentProps>(
             <TooltipProvider
               tooltip={
                 <Tooltip variant="Critical">
-                  <Text>Failed to load video!</Text>
+                  <Text>加载视频失败。</Text>
                 </Tooltip>
               }
               position="Top"
@@ -173,7 +173,7 @@ export const VideoContent = as<'div', VideoContentProps>(
                   onClick={handleRetry}
                   before={<Icon size="Inherit" src={Icons.Warning} filled />}
                 >
-                  <Text size="B300">Retry</Text>
+                  <Text size="B300">重试</Text>
                 </Button>
               )}
             </TooltipProvider>

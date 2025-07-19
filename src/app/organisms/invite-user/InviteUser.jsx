@@ -94,13 +94,13 @@ function InviteUser({ isOpen, roomId, searchTerm, onRequestClose }) {
           limit: 20,
         });
         if (result.results.length === 0) {
-          updateSearchQuery({ error: `No matches found for "${inputUsername}"!` });
+          updateSearchQuery({ error: `没有找到与 "${inputUsername}" 匹配的内容。` });
           updateIsSearching(false);
           return;
         }
         updateUsers(result.results);
       } catch (e) {
-        updateSearchQuery({ error: 'Something went wrong!' });
+        updateSearchQuery({ error: '出错了！' });
       }
     }
     updateIsSearching(false);
@@ -127,7 +127,7 @@ function InviteUser({ isOpen, roomId, searchTerm, onRequestClose }) {
     } catch (e) {
       deleteUserFromProc(userId);
       if (typeof e.message === 'string') procUserError.set(userId, e.message);
-      else procUserError.set(userId, 'Something went wrong!');
+      else procUserError.set(userId, '出错了！');
       updateUserProcError(getMapCopy(procUserError));
     }
   }
@@ -175,7 +175,7 @@ function InviteUser({ isOpen, roomId, searchTerm, onRequestClose }) {
               onRequestClose();
             }}
           >
-            Open
+            打开
           </Button>
         );
       }
@@ -199,11 +199,11 @@ function InviteUser({ isOpen, roomId, searchTerm, onRequestClose }) {
       }
       return typeof roomId === 'string' ? (
         <Button onClick={() => inviteToRoom(userId)} variant="primary">
-          Invite
+          邀请
         </Button>
       ) : (
         <Button onClick={() => createDM(userId)} variant="primary">
-          Message
+          发消息
         </Button>
       );
     };
@@ -261,8 +261,8 @@ function InviteUser({ isOpen, roomId, searchTerm, onRequestClose }) {
   return (
     <PopupWindow
       isOpen={isOpen}
-      title={typeof roomId === 'string' ? `Invite to ${mx.getRoom(roomId).name}` : 'Direct message'}
-      contentOptions={<IconButton src={CrossIC} onClick={onRequestClose} tooltip="Close" />}
+      title={typeof roomId === 'string' ? `Invite to ${mx.getRoom(roomId).name}` : '私聊消息'}
+      contentOptions={<IconButton src={CrossIC} onClick={onRequestClose} tooltip="关闭" />}
       onRequestClose={onRequestClose}
     >
       <div className="invite-user">
@@ -273,9 +273,9 @@ function InviteUser({ isOpen, roomId, searchTerm, onRequestClose }) {
             searchUser(usernameRef.current.value);
           }}
         >
-          <Input value={searchTerm} forwardRef={usernameRef} label="Name or userId" autoFocus />
+          <Input value={searchTerm} forwardRef={usernameRef} label="姓名或用户ID" autoFocus />
           <Button disabled={isSearching} iconSrc={UserIC} variant="primary" type="submit">
-            Search
+            搜索
           </Button>
         </form>
         <div className="invite-user__search-status">
@@ -286,7 +286,7 @@ function InviteUser({ isOpen, roomId, searchTerm, onRequestClose }) {
             </div>
           )}
           {typeof searchQuery.username !== 'undefined' && !isSearching && (
-            <Text variant="b2">{`Search result for user "${searchQuery.username}"`}</Text>
+            <Text variant="b2">{`关于 "${searchQuery.username}" 的搜索结果`}</Text>
           )}
           {searchQuery.error && (
             <Text className="invite-user__search-error" variant="b2">

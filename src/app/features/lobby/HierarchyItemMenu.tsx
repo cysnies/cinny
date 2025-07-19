@@ -64,7 +64,7 @@ function SuggestMenuItem({
       disabled={toggleState.status === AsyncStatus.Loading}
     >
       <Text as="span" size="T300" truncate>
-        {content.suggested ? 'Unset Suggested' : 'Set Suggested'}
+        {content.suggested ? '取消推荐' : '设置推荐'}
       </Text>
     </MenuItem>
   );
@@ -108,7 +108,7 @@ function RemoveMenuItem({
       disabled={removeState.status === AsyncStatus.Loading}
     >
       <Text as="span" size="T300" truncate>
-        Remove
+        移除
       </Text>
     </MenuItem>
   );
@@ -138,7 +138,7 @@ function InviteMenuItem({
       disabled={disabled}
     >
       <Text as="span" size="T300" truncate>
-        Invite
+        邀请
       </Text>
     </MenuItem>
   );
@@ -169,7 +169,7 @@ function SettingsMenuItem({
   return (
     <MenuItem onClick={handleSettings} size="300" radii="300" disabled={disabled}>
       <Text as="span" size="T300" truncate>
-        Settings
+        设置
       </Text>
     </MenuItem>
   );
@@ -247,7 +247,7 @@ export function HierarchyItemMenu({
                         }}
                       >
                         <Text as="span" size="T300" truncate>
-                          {pinned ? 'Unpin from Sidebar' : 'Pin to Sidebar'}
+                          {pinned ? '从侧边栏中取消固定' : '固定到侧边栏'}
                         </Text>
                       </MenuItem>
                     )}
@@ -270,7 +270,7 @@ export function HierarchyItemMenu({
                             aria-pressed={promptLeave}
                           >
                             <Text style={{ flexGrow: 1 }} as="span" size="T300" truncate>
-                              Leave
+                              离开
                             </Text>
                           </MenuItem>
                           {promptLeave &&

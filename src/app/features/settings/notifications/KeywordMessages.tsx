@@ -97,7 +97,7 @@ function KeywordInput() {
         disabled={addingKeyword}
       >
         {addingKeyword && <Spinner variant="Secondary" size="300" />}
-        <Text size="B400">Save</Text>
+        <Text size="B400">保存</Text>
       </Button>
     </Box>
   );
@@ -162,9 +162,9 @@ export function KeywordMessagesNotifications() {
   return (
     <Box direction="Column" gap="100">
       <Box alignItems="Center" justifyContent="SpaceBetween" gap="200">
-        <Text size="L400">Keyword Messages</Text>
+        <Text size="L400">关键词消息</Text>
         <Box gap="100">
-          <Text size="T200">Badge: </Text>
+          <Text size="T200">图标：</Text>
           <Badge radii="300" variant="Success" fill="Solid">
             <Text size="L400">1</Text>
           </Badge>
@@ -177,8 +177,8 @@ export function KeywordMessagesNotifications() {
         gap="400"
       >
         <SettingTile
-          title="Select Keyword"
-          description="Set a notification preference for message containing given keyword."
+          title="选择关键词"
+          description="为包含给定关键词的消息设置通知偏好。"
         >
           <KeywordInput />
         </SettingTile>

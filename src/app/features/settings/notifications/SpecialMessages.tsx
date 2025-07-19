@@ -124,9 +124,9 @@ export function SpecialMessagesNotifications() {
   return (
     <Box direction="Column" gap="100">
       <Box alignItems="Center" justifyContent="SpaceBetween" gap="200">
-        <Text size="L400">Special Messages</Text>
+        <Text size="L400">特殊消息</Text>
         <Box gap="100">
-          <Text size="T200">Badge: </Text>
+          <Text size="T200">图标：</Text>
           <Badge radii="300" variant="Success" fill="Solid">
             <Text size="L400">1</Text>
           </Badge>
@@ -139,7 +139,7 @@ export function SpecialMessagesNotifications() {
         gap="400"
       >
         <SettingTile
-          title={`Mention User ID ("${userId}")`}
+          title={`提到你的用户ID ("${userId}")`}
           after={
             <MentionModeSwitcher
               pushRules={pushRules}
@@ -156,7 +156,7 @@ export function SpecialMessagesNotifications() {
         gap="400"
       >
         <SettingTile
-          title={`Contains Displayname ${displayName ? `("${displayName}")` : ''}`}
+          title={`包含你的显示名称 ${displayName ? `("${displayName}")` : ''}`}
           after={
             <MentionModeSwitcher
               pushRules={pushRules}
@@ -173,7 +173,7 @@ export function SpecialMessagesNotifications() {
         gap="400"
       >
         <SettingTile
-          title={`Contains Username ("${getMxIdLocalPart(userId)}")`}
+          title={`包含你的用户名 ("${getMxIdLocalPart(userId)}")`}
           after={
             <MentionModeSwitcher
               pushRules={pushRules}
@@ -190,7 +190,7 @@ export function SpecialMessagesNotifications() {
         gap="400"
       >
         <SettingTile
-          title="Mention @room"
+          title="提到你所在的房间（@room）"
           after={
             <MentionModeSwitcher
               pushRules={pushRules}
@@ -207,7 +207,7 @@ export function SpecialMessagesNotifications() {
         gap="400"
       >
         <SettingTile
-          title="Contains @room"
+          title="包含你所在的房间（@room）"
           after={
             <MentionModeSwitcher
               pushRules={pushRules}

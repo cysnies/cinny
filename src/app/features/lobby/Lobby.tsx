@@ -535,7 +535,7 @@ export function Lobby() {
                         radii="Pill"
                         before={<Spinner variant="Secondary" fill="Soft" size="100" />}
                       >
-                        <Text size="L400">Reordering</Text>
+                        <Text size="L400">录制中</Text>
                       </Chip>
                     </Box>
                   )}

@@ -46,10 +46,10 @@ export function About({ requestClose }: AboutProps) {
                 <Box direction="Column" gap="300">
                   <Box direction="Column" gap="100">
                     <Box gap="100" alignItems="End">
-                      <Text size="H3">Cinny</Text>
+                      <Text size="H3">Redrock Chat</Text>
                       <Text size="T200">v{cons.version}</Text>
                     </Box>
-                    <Text>Yet another matrix client.</Text>
+                    <Text>由 Matrix 和 Cinny 驱动。</Text>
                   </Box>
 
                   <Box gap="200" wrap="Wrap">
@@ -64,26 +64,13 @@ export function About({ requestClose }: AboutProps) {
                       radii="300"
                       before={<Icon src={Icons.Code} size="100" filled />}
                     >
-                      <Text size="B300">Source Code</Text>
-                    </Button>
-                    <Button
-                      as="a"
-                      href="https://cinny.in/#sponsor"
-                      rel="noreferrer noopener"
-                      target="_blank"
-                      variant="Critical"
-                      fill="Soft"
-                      size="300"
-                      radii="300"
-                      before={<Icon src={Icons.Heart} size="100" filled />}
-                    >
-                      <Text size="B300">Support</Text>
+                      <Text size="B300">源代码</Text>
                     </Button>
                   </Box>
                 </Box>
               </Box>
               <Box direction="Column" gap="100">
-                <Text size="L400">Options</Text>
+                <Text size="L400">选项</Text>
                 <SequenceCard
                   className={SequenceCardStyle}
                   variant="SurfaceVariant"
@@ -91,8 +78,8 @@ export function About({ requestClose }: AboutProps) {
                   gap="400"
                 >
                   <SettingTile
-                    title="Clear Cache & Reload"
-                    description="Clear all your locally stored data and reload from server."
+                    title="清除缓存并重新加载"
+                    description="清除你所有本地存储的数据并从服务器重新加载。"
                     after={
                       <Button
                         onClick={() => clearCacheAndReload(mx)}
@@ -102,14 +89,14 @@ export function About({ requestClose }: AboutProps) {
                         radii="300"
                         outlined
                       >
-                        <Text size="B300">Clear Cache</Text>
+                        <Text size="B300">清除缓存</Text>
                       </Button>
                     }
                   />
                 </SequenceCard>
               </Box>
               <Box direction="Column" gap="100">
-                <Text size="L400">Credits</Text>
+                <Text size="L400">鸣谢</Text>
                 <SequenceCard
                   className={SequenceCardStyle}
                   variant="SurfaceVariant"

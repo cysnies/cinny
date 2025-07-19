@@ -62,19 +62,19 @@ export function RoomPublishedAddresses({ powerLevels }: RoomPublishedAddressesPr
       gap="400"
     >
       <SettingTile
-        title="Published Addresses"
+        title="发布的地址"
         description={
           <span>
-            If access is <b>Public</b>, Published addresses will be used to join by anyone.
+            如果访问权限是<b>公开</b>的，已发布的地址可以被任何人用来加入。
           </span>
         }
       />
       <CutoutCard variant="Surface" style={{ padding: config.space.S300 }}>
         {publishedAliases.length === 0 ? (
           <Box direction="Column" gap="100">
-            <Text size="L400">No Addresses</Text>
+            <Text size="L400">没有地址</Text>
             <Text size="T200">
-              To publish an address, it needs to be set as a local address first
+              要发布一个地址，首先需要将其设置为本地地址。
             </Text>
           </Box>
         ) : (
@@ -87,7 +87,7 @@ export function RoomPublishedAddresses({ powerLevels }: RoomPublishedAddressesPr
                   </Text>
                   {alias === canonicalAlias && (
                     <Badge variant="Success" fill="Solid" size="500">
-                      <Text size="L400">Main</Text>
+                      <Text size="L400">主要</Text>
                     </Badge>
                   )}
                 </Box>
@@ -101,7 +101,7 @@ export function RoomPublishedAddresses({ powerLevels }: RoomPublishedAddressesPr
                         disabled={loading}
                         onClick={() => setMain(undefined)}
                       >
-                        <Text size="B300">Unset Main</Text>
+                        <Text size="B300">取消设置为主要</Text>
                       </Chip>
                     ) : (
                       <Chip
@@ -111,7 +111,7 @@ export function RoomPublishedAddresses({ powerLevels }: RoomPublishedAddressesPr
                         disabled={loading}
                         onClick={() => setMain(alias)}
                       >
-                        <Text size="B300">Set Main</Text>
+                        <Text size="B300">设置为主要</Text>
                       </Chip>
                     )}
                   </Box>
@@ -184,7 +184,7 @@ function LocalAddressInput({ addLocalAlias }: { addLocalAlias: (alias: string) =
             disabled={adding}
             before={adding && <Spinner size="100" variant="Success" fill="Solid" />}
           >
-            <Text size="B400">Save</Text>
+            <Text size="B400">保存</Text>
           </Button>
         </Box>
       </Box>
@@ -288,7 +288,7 @@ function LocalAddressesList({
                     )
                   }
                 >
-                  <Text size="B300">Unpublish</Text>
+                  <Text size="B300">取消发布</Text>
                 </Chip>
               ) : (
                 <Chip
@@ -302,7 +302,7 @@ function LocalAddressesList({
                     )
                   }
                 >
-                  <Text size="B300">Publish</Text>
+                  <Text size="B300">发布</Text>
                 </Chip>
               ))}
             <Chip
@@ -316,7 +316,7 @@ function LocalAddressesList({
                 )
               }
             >
-              <Text size="B300">Delete</Text>
+              <Text size="B300">删除</Text>
             </Chip>
           </Box>
         </Box>
@@ -344,7 +344,7 @@ function LocalAddressesList({
             <Box shrink="No" gap="100">
               {published && (
                 <Badge variant="Success" fill="Soft" size="500">
-                  <Text size="L400">Published</Text>
+                  <Text size="L400">已发布</Text>
                 </Badge>
               )}
             </Box>
@@ -382,8 +382,8 @@ export function RoomLocalAddresses({ powerLevels }: { powerLevels: IPowerLevels 
       gap="400"
     >
       <SettingTile
-        title="Local Addresses"
-        description="Set local address so users can join through your homeserver."
+        title="本地地址"
+        description="设置本地地址，以便用户可以通过你的家服务器加入。"
         after={
           <Button
             type="button"
@@ -398,7 +398,7 @@ export function RoomLocalAddresses({ powerLevels }: { powerLevels: IPowerLevels 
             }
           >
             <Text as="span" size="B300" truncate>
-              {expand ? 'Collapse' : 'Expand'}
+              {expand ? '折叠' : '展开'}
             </Text>
           </Button>
         }
@@ -408,13 +408,13 @@ export function RoomLocalAddresses({ powerLevels }: { powerLevels: IPowerLevels 
           {localAliasesState.status === AsyncStatus.Loading && (
             <Box gap="100">
               <Spinner variant="Secondary" size="100" />
-              <Text size="T200">Loading...</Text>
+              <Text size="T200">加载中...</Text>
             </Box>
           )}
           {localAliasesState.status === AsyncStatus.Success &&
             (localAliasesState.data.length === 0 ? (
               <Box direction="Column" gap="100">
-                <Text size="L400">No Addresses</Text>
+                <Text size="L400">没有地址</Text>
               </Box>
             ) : (
               <LocalAddressesList

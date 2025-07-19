@@ -88,7 +88,7 @@ export function DeveloperTools({ requestClose }: DeveloperToolsProps) {
         <Box grow="Yes" gap="200">
           <Box grow="Yes" alignItems="Center" gap="200">
             <Text size="H3" truncate>
-              Developer Tools
+              开发者工具
             </Text>
           </Box>
           <Box shrink="No">
@@ -103,7 +103,7 @@ export function DeveloperTools({ requestClose }: DeveloperToolsProps) {
           <PageContent>
             <Box direction="Column" gap="700">
               <Box direction="Column" gap="100">
-                <Text size="L400">Options</Text>
+                <Text size="L400">选项</Text>
                 <SequenceCard
                   className={SequenceCardStyle}
                   variant="SurfaceVariant"
@@ -111,7 +111,7 @@ export function DeveloperTools({ requestClose }: DeveloperToolsProps) {
                   gap="400"
                 >
                   <SettingTile
-                    title="Enable Developer Tools"
+                    title="启用开发者工具"
                     after={
                       <Switch
                         variant="Primary"
@@ -129,8 +129,8 @@ export function DeveloperTools({ requestClose }: DeveloperToolsProps) {
                     gap="400"
                   >
                     <SettingTile
-                      title="Room ID"
-                      description={`Copy room ID to clipboard. ("${room.roomId}")`}
+                      title="房间ID"
+                      description={`复制房间ID到剪贴板。 ("${room.roomId}")`}
                       after={
                         <Button
                           onClick={() => copyToClipboard(room.roomId ?? '<NO_ROOM_ID_FOUND>')}
@@ -140,7 +140,7 @@ export function DeveloperTools({ requestClose }: DeveloperToolsProps) {
                           radii="300"
                           outlined
                         >
-                          <Text size="B300">Copy</Text>
+                          <Text size="B300">复制</Text>
                         </Button>
                       }
                     />
@@ -150,7 +150,7 @@ export function DeveloperTools({ requestClose }: DeveloperToolsProps) {
 
               {developerTools && (
                 <Box direction="Column" gap="100">
-                  <Text size="L400">Data</Text>
+                  <Text size="L400">数据</Text>
 
                   <SequenceCard
                     className={SequenceCardStyle}
@@ -159,8 +159,8 @@ export function DeveloperTools({ requestClose }: DeveloperToolsProps) {
                     gap="400"
                   >
                     <SettingTile
-                      title="New Message Event"
-                      description="Create and send a new message event within the room."
+                      title="新的消息事件"
+                      description="在当前房间内创建并发送一个新的消息事件。"
                       after={
                         <Button
                           onClick={() => setComposeEvent({})}
@@ -170,7 +170,7 @@ export function DeveloperTools({ requestClose }: DeveloperToolsProps) {
                           radii="300"
                           outlined
                         >
-                          <Text size="B300">Compose</Text>
+                          <Text size="B300">创建</Text>
                         </Button>
                       }
                     />
@@ -182,8 +182,8 @@ export function DeveloperTools({ requestClose }: DeveloperToolsProps) {
                     gap="400"
                   >
                     <SettingTile
-                      title="Room State"
-                      description="State events of the room."
+                      title="房间状态"
+                      description="房间的状态消息。"
                       after={
                         <Button
                           onClick={() => setExpandState(!expandState)}
@@ -200,15 +200,15 @@ export function DeveloperTools({ requestClose }: DeveloperToolsProps) {
                             />
                           }
                         >
-                          <Text size="B300">{expandState ? 'Collapse' : 'Expand'}</Text>
+                          <Text size="B300">{expandState ? '折叠' : '展开'}</Text>
                         </Button>
                       }
                     />
                     {expandState && (
                       <Box direction="Column" gap="100">
                         <Box justifyContent="SpaceBetween">
-                          <Text size="L400">Events</Text>
-                          <Text size="L400">Total: {roomState.size}</Text>
+                          <Text size="L400">事件</Text>
+                          <Text size="L400">共计：{roomState.size}</Text>
                         </Box>
                         <CutoutCard>
                           <MenuItem
@@ -221,7 +221,7 @@ export function DeveloperTools({ requestClose }: DeveloperToolsProps) {
                           >
                             <Box grow="Yes">
                               <Text size="T200" truncate>
-                                Add New
+                                新增
                               </Text>
                             </Box>
                           </MenuItem>
@@ -275,7 +275,7 @@ export function DeveloperTools({ requestClose }: DeveloperToolsProps) {
                                       >
                                         <Box grow="Yes">
                                           <Text size="T200" truncate>
-                                            Add New
+                                            新增
                                           </Text>
                                         </Box>
                                       </MenuItem>
@@ -319,8 +319,8 @@ export function DeveloperTools({ requestClose }: DeveloperToolsProps) {
                     gap="400"
                   >
                     <SettingTile
-                      title="Account Data"
-                      description="Private personalization data stored within room."
+                      title="账户数据"
+                      description="存储在房间内的私人个性化数据。"
                       after={
                         <Button
                           onClick={() => setExpandAccountData(!expandAccountData)}
@@ -337,15 +337,15 @@ export function DeveloperTools({ requestClose }: DeveloperToolsProps) {
                             />
                           }
                         >
-                          <Text size="B300">{expandAccountData ? 'Collapse' : 'Expand'}</Text>
+                          <Text size="B300">{expandAccountData ? '折叠' : '展开'}</Text>
                         </Button>
                       }
                     />
                     {expandAccountData && (
                       <Box direction="Column" gap="100">
                         <Box justifyContent="SpaceBetween">
-                          <Text size="L400">Events</Text>
-                          <Text size="L400">Total: {accountData.size}</Text>
+                          <Text size="L400">事件</Text>
+                          <Text size="L400">共计：{accountData.size}</Text>
                         </Box>
                         <CutoutCard>
                           <MenuItem
@@ -358,7 +358,7 @@ export function DeveloperTools({ requestClose }: DeveloperToolsProps) {
                           >
                             <Box grow="Yes">
                               <Text size="T200" truncate>
-                                Add New
+                                新增
                               </Text>
                             </Box>
                           </MenuItem>

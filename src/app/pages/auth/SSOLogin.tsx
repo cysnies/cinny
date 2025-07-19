@@ -85,7 +85,7 @@ export function SSOLogin({ providers, redirectUrl, action, saveScreenSpace }: SS
           outlined
         >
           <Text align="Center" size="B500" truncate>
-            Continue with SSO
+            使用 SSO 继续
           </Text>
         </Button>
       )}

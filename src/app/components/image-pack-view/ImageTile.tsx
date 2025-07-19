@@ -71,7 +71,7 @@ export function ImageTile({
               radii="Pill"
               onClick={() => onDeleteToggle?.(defaultShortcode)}
             >
-              {deleted ? <Text size="B300">Undo</Text> : <Icon size="50" src={Icons.Delete} />}
+              {deleted ? <Text size="B300">撤销</Text> : <Icon size="50" src={Icons.Delete} />}
             </Chip>
             {!deleted && (
               <Chip
@@ -79,7 +79,7 @@ export function ImageTile({
                 radii="Pill"
                 onClick={() => onEdit?.(defaultShortcode, image)}
               >
-                <Text size="B300">Edit</Text>
+                <Text size="B300">编辑</Text>
               </Chip>
             )}
           </Box>
@@ -205,7 +205,7 @@ export function ImageTileEdit({
             radii="300"
             onClick={() => onCancel(defaultShortcode)}
           >
-            <Text size="B300">Cancel</Text>
+            <Text size="B300">取消</Text>
           </Button>
         </Box>
       </Box>

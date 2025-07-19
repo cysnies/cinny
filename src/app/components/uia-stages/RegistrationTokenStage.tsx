@@ -38,7 +38,7 @@ function RegistrationTokenErrorDialog({
           <Text size="H4">{title}</Text>
           <Text>{message}</Text>
           <Text as="label" size="L400" style={{ paddingTop: config.space.S400 }}>
-            Registration Token
+            注册口令
           </Text>
           <Input
             name="retryTokenInput"
@@ -51,12 +51,12 @@ function RegistrationTokenErrorDialog({
         </Box>
         <Button variant="Critical" type="submit">
           <Text as="span" size="B400">
-            Retry
+            重试
           </Text>
         </Button>
         <Button variant="Critical" fill="None" outlined type="button" onClick={onCancel}>
           <Text as="span" size="B400">
-            Cancel
+            取消
           </Text>
         </Button>
       </Box>
