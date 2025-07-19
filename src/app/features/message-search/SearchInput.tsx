@@ -57,7 +57,7 @@ export function SearchInput({ active, loading, searchInputRef, onSearch, onReset
             </Chip>
           ) : (
             <Chip type="submit" variant="Primary" size="400" radii="Pill" outlined>
-              <Text size="B300">回车</Text>
+              <Text size="B300">搜索</Text>
             </Chip>
           )
         }

@@ -173,7 +173,7 @@ export function Explore() {
         <Box grow="Yes" gap="300">
           <Box grow="Yes">
             <Text size="H4" truncate>
-              Explore Community
+              探索服务器
             </Text>
           </Box>
         </Box>
@@ -191,7 +191,7 @@ export function Explore() {
                     </Avatar>
                     <Box as="span" grow="Yes">
                       <Text as="span" size="Inherit" truncate>
-                        Featured
+                        推荐
                       </Text>
                     </Box>
                   </Box>

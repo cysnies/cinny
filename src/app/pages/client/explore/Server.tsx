@@ -136,7 +136,7 @@ function Search({ active, loading, searchInputRef, onSearch, onReset }: SearchPr
             </Chip>
           ) : (
             <Chip type="submit" variant="Primary" size="400" radii="Pill" outlined>
-              <Text size="B300">回车</Text>
+              <Text size="B300">搜索</Text>
             </Chip>
           )
         }
@@ -334,7 +334,7 @@ function LimitButton({ limit, onLimitChange }: LimitButtonProps) {
         variant="SurfaceVariant"
         after={<Icon size="100" src={Icons.ChevronBottom} />}
       >
-        <Text size="T200" truncate>{`Page Limit: ${limit}`}</Text>
+        <Text size="T200" truncate>{`页数上限：${limit}`}</Text>
       </Chip>
     </PopOut>
   );

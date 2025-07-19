@@ -186,7 +186,7 @@ function HomeEmpty() {
               size="300"
             >
               <Text size="B300" truncate>
-                探索房间
+                探索服务器
               </Text>
             </Button>
           </>

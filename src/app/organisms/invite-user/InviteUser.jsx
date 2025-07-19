@@ -120,7 +120,7 @@ function InviteUser({ isOpen, roomId, searchTerm, onRequestClose }) {
       procUserError.delete(userId);
       updateUserProcError(getMapCopy(procUserError));
 
-      const result = await roomActions.createDM(mx, userId, await hasDevices(mx, userId));
+      const result = await roomActions.createDM(mx, userId, false);
       roomIdToUserId.set(result.room_id, userId);
       updateRoomIdToUserId(getMapCopy(roomIdToUserId));
       onDMCreated(result.room_id);

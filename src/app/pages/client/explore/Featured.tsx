@@ -49,14 +49,14 @@ export function FeaturedRooms() {
                 <PageHeroSection>
                   <PageHero
                     icon={<Icon size="600" src={Icons.Bulb} />}
-                    title="Featured by Client"
-                    subTitle="Find and explore public rooms and spaces featured by client provider."
+                    title="推荐"
+                    subTitle="推荐的频道和房间"
                   />
                 </PageHeroSection>
                 <Box direction="Column" gap="700">
                   {spaces && spaces.length > 0 && (
                     <Box direction="Column" gap="400">
-                      <Text size="H4">Featured Spaces</Text>
+                      <Text size="H4">推荐频道</Text>
                       <RoomCardGrid>
                         {spaces.map((roomIdOrAlias) => (
                           <RoomSummaryLoader key={roomIdOrAlias} roomIdOrAlias={roomIdOrAlias}>
@@ -85,7 +85,7 @@ export function FeaturedRooms() {
                   )}
                   {rooms && rooms.length > 0 && (
                     <Box direction="Column" gap="400">
-                      <Text size="H4">Featured Rooms</Text>
+                      <Text size="H4">推荐房间</Text>
                       <RoomCardGrid>
                         {rooms.map((roomIdOrAlias) => (
                           <RoomSummaryLoader key={roomIdOrAlias} roomIdOrAlias={roomIdOrAlias}>

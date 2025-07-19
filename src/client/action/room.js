@@ -122,7 +122,7 @@ async function create(mx, options, isDM = false) {
   }
 }
 
-async function createDM(mx, userIdOrIds, isEncrypted = true) {
+async function createDM(mx, userIdOrIds, isEncrypted = false) {
   const options = {
     is_direct: true,
     invite: Array.isArray(userIdOrIds) ? userIdOrIds : [userIdOrIds],

@@ -205,7 +205,7 @@ function ProfileFooter({ roomId, userId, onRequestClose }) {
     // Create new DM
     try {
       setIsCreatingDM(true);
-      const result = await roomActions.createDM(mx, userId, await hasDevices(mx, userId));
+      const result = await roomActions.createDM(mx, userId, false);
       onCreated(result.room_id);
     } catch {
       if (isMountedRef.current === false) return;

@@ -58,7 +58,7 @@ function JoinAliasContent({ term, requestClose }) {
         if (!mountStore.getItem()) return;
         setProcess(false);
         setError(
-          `Unable to find room/space with ${alias}. Either room/space is private or doesn't exist.`
+          `无法使用 ${alias} 找到频道或房间。`
         );
       }
     }
@@ -69,7 +69,7 @@ function JoinAliasContent({ term, requestClose }) {
     } catch {
       if (!mountStore.getItem()) return;
       setProcess(false);
-      setError(`Unable to join ${alias}. Either room/space is private or doesn't exist.`);
+      setError(`无法加入 ${alias}。`);
     }
   };
 

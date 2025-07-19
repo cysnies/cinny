@@ -201,9 +201,7 @@ export const useCommands = (mx: MatrixClient, room: Room): CommandRecord => {
               return;
             }
           }
-          const devices = await Promise.all(userIds.map((uid) => hasDevices(mx, uid)));
-          const isEncrypt = devices.every((hasDevice) => hasDevice);
-          const result = await roomActions.createDM(mx, userIds, isEncrypt);
+          const result = await roomActions.createDM(mx, userIds, false);
           navigateRoom(result.room_id);
         },
       },

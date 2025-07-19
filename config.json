@@ -3,13 +3,13 @@
   "homeserverList": [
     "matrix.redrock.team"
   ],
-  "allowCustomHomeservers": true,
+  "allowCustomHomeservers": false,
 
   "featuredCommunities": {
     "openAsDefault": false,
     "spaces": ["#testing:matrix.redrock.team"],
     "rooms": ["#redrock:matrix.redrock.team","#chat:matrix.redrock.team","#feedback:matrix.redrock.team"],
-    "servers": ["matrix.redrock.team"]
+    "servers": []
   },
 
   "hashRouter": {

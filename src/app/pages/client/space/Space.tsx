@@ -412,7 +412,7 @@ export function Space() {
                           onClick={handleCategoryClick}
                           closed={closedCategories.has(categoryId)}
                         >
-                          {roomId === space.roomId ? 'Rooms' : room?.name}
+                          {roomId === space.roomId ? '房间' : room?.name}
                         </RoomNavCategoryButton>
                       </NavCategoryHeader>
                     </div>
