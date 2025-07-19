@@ -94,15 +94,15 @@ export const useMemberEventParser = (): MemberEventParser => {
               senderId === userId ? (
                 <>
                   <b>{userName}</b>
-                  {' rejected the invitation '}
+                  {' 拒绝了邀请：'}
                   {reason}
                 </>
               ) : (
                 <>
                   <b>{senderName}</b>
-                  {' rejected '}
+                  {' 拒绝了 '}
                   <b>{userName}</b>
-                  {`'s join request `}
+                  {` 的邀请：`}
                   {reason}
                 </>
               ),
@@ -116,15 +116,15 @@ export const useMemberEventParser = (): MemberEventParser => {
               senderId === userId ? (
                 <>
                   <b>{userName}</b>
-                  {' revoked joined request '}
+                  {' 撤销了加入请求：'}
                   {reason}
                 </>
               ) : (
                 <>
                   <b>{senderName}</b>
-                  {' revoked '}
+                  {' 撤销了 '}
                   <b>{userName}</b>
-                  {`'s invite `}
+                  {` 的加入请求：`}
                   {reason}
                 </>
               ),
@@ -137,7 +137,7 @@ export const useMemberEventParser = (): MemberEventParser => {
             body: (
               <>
                 <b>{senderName}</b>
-                {' unbanned '}
+                {' 取消封禁了 '}
                 <b>{userName}</b> {reason}
               </>
             ),
@@ -150,13 +150,13 @@ export const useMemberEventParser = (): MemberEventParser => {
             senderId === userId ? (
               <>
                 <b>{userName}</b>
-                {' left the room '}
+                {' 离开了房间 '}
                 {reason}
               </>
             ) : (
               <>
                 <b>{senderName}</b>
-                {' kicked '}
+                {' 踢出了 '}
                 <b>{userName}</b> {reason}
               </>
             ),
@@ -169,7 +169,7 @@ export const useMemberEventParser = (): MemberEventParser => {
           body: (
             <>
               <b>{senderName}</b>
-              {' banned '}
+              {' 封禁了 '}
               <b>{userName}</b> {reason}
             </>
           ),
@@ -189,13 +189,13 @@ export const useMemberEventParser = (): MemberEventParser => {
           typeof content.displayname === 'string' ? (
             <>
               <b>{prevUserName}</b>
-              {' changed display name to '}
+              {' 将昵称修改为 '}
               <b>{userName}</b>
             </>
           ) : (
             <>
               <b>{prevUserName}</b>
-              {' removed their display name '}
+              {' 移除了昵称 '}
             </>
           ),
       };
@@ -207,12 +207,12 @@ export const useMemberEventParser = (): MemberEventParser => {
           content.avatar_url && typeof content.avatar_url === 'string' ? (
             <>
               <b>{userName}</b>
-              {' changed their avatar'}
+              {' 修改了头像'}
             </>
           ) : (
             <>
               <b>{userName}</b>
-              {' removed their avatar '}
+              {' 移除了头像'}
             </>
           ),
       };
@@ -220,7 +220,7 @@ export const useMemberEventParser = (): MemberEventParser => {
 
     return {
       icon: Icons.User,
-      body: 'Membership event with no changes',
+      body: '成员事件未引入变化',
     };
   };
 

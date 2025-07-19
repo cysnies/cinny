@@ -248,7 +248,7 @@ function ProfileDisplayName({ profile, userId }: ProfileProps) {
     <SettingTile
       title={
         <Text as="span" size="L400">
-          显示的名称
+          昵称
         </Text>
       }
     >

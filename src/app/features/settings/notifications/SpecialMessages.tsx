@@ -156,7 +156,7 @@ export function SpecialMessagesNotifications() {
         gap="400"
       >
         <SettingTile
-          title={`包含你的显示名称 ${displayName ? `("${displayName}")` : ''}`}
+          title={`包含你的昵称 ${displayName ? `("${displayName}")` : ''}`}
           after={
             <MentionModeSwitcher
               pushRules={pushRules}
