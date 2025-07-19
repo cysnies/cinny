@@ -377,7 +377,7 @@ export function Space() {
                     </Avatar>
                     <Box as="span" grow="Yes">
                       <Text as="span" size="Inherit" truncate>
-                        在消息中搜索
+                        搜索
                       </Text>
                     </Box>
                   </Box>
