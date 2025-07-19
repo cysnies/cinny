@@ -284,7 +284,7 @@ export function SearchResultGroup({
                       variant="Secondary"
                       radii="400"
                     >
-                      <Text size="T200">Open</Text>
+                      <Text size="T200">打开</Text>
                     </Chip>
                   </Box>
                 </Box>
