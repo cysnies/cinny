@@ -7,7 +7,7 @@
 
   "featuredCommunities": {
     "openAsDefault": false,
-    "spaces": [],
+    "spaces": ["#testing:matrix.redrock.team"],
     "rooms": ["#redrock:matrix.redrock.team"],
     "servers": ["matrix.redrock.team"]
   },
