@@ -470,9 +470,9 @@ export const MessageDeleteItem = as<
                 </Text>
                 <Box direction="Column" gap="100">
                   <Text size="L400">
-                    Reason{' '}
+                    原因{' '}
                     <Text as="span" size="T200">
-                      (optional)
+                      （可选）
                     </Text>
                   </Text>
                   <Input name="reasonInput" variant="Background" />
@@ -599,7 +599,7 @@ export const MessageReportItem = as<
                   向服务器举报这条消息，让合适的人员对此做出处置。
                 </Text>
                 <Box direction="Column" gap="100">
-                  <Text size="L400">Reason</Text>
+                  <Text size="L400">原因</Text>
                   <Input name="reasonInput" variant="Background" required />
                   {reportState.status === AsyncStatus.Error && (
                     <Text style={{ color: color.Critical.Main }} size="T300">
