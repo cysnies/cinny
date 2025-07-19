@@ -58,7 +58,7 @@ export const TimePicker = forwardRef<HTMLDivElement, TimePickerProps>(
     return (
       <Menu className={css.PickerMenu} ref={ref}>
         <Box direction="Row" gap="200" className={css.PickerContainer}>
-          <PickerColumn title="Hour">
+          <PickerColumn title="小时">
             {Array.from(Array(12).keys())
               .map((i) => {
                 if (i === 0) return 12;
@@ -82,7 +82,7 @@ export const TimePicker = forwardRef<HTMLDivElement, TimePickerProps>(
                 </Chip>
               ))}
           </PickerColumn>
-          <PickerColumn title="Minutes">
+          <PickerColumn title="分钟">
             {Array.from(Array(60).keys()).map((minute) => (
               <Chip
                 key={minute}
@@ -101,7 +101,7 @@ export const TimePicker = forwardRef<HTMLDivElement, TimePickerProps>(
               </Chip>
             ))}
           </PickerColumn>
-          <PickerColumn title="Period">
+          <PickerColumn title="时间段">
             <Chip
               size="500"
               variant={!selectedPM ? 'Primary' : 'SurfaceVariant'}
@@ -111,7 +111,7 @@ export const TimePicker = forwardRef<HTMLDivElement, TimePickerProps>(
               onClick={() => handlePeriod(false)}
               disabled={minDay && minPM}
             >
-              <Text size="T300">AM</Text>
+              <Text size="T300">上午</Text>
             </Chip>
             <Chip
               size="500"
@@ -122,7 +122,7 @@ export const TimePicker = forwardRef<HTMLDivElement, TimePickerProps>(
               onClick={() => handlePeriod(true)}
               disabled={maxDay && !maxPM}
             >
-              <Text size="T300">PM</Text>
+              <Text size="T300">下午</Text>
             </Chip>
           </PickerColumn>
         </Box>

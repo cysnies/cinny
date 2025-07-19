@@ -245,7 +245,7 @@ export function JumpToTime({ onCancel, onSubmit }: JumpToTimeProps) {
                 }
                 onClick={handleSubmit}
               >
-                <Text size="B400">打开时间线</Text>
+                <Text size="B400">跳转</Text>
               </Button>
             </Box>
           </Dialog>
