@@ -83,7 +83,7 @@ export const RoomViewFollowing = as<'div', RoomViewFollowingProps>(
                   <>
                     <b>{names[0]}</b>
                     <Text as="span" size="Inherit" priority="300">
-                      {' 正在关注对话'}
+                      {' 正在关注会话'}
                     </Text>
                   </>
                 )}
@@ -95,7 +95,7 @@ export const RoomViewFollowing = as<'div', RoomViewFollowingProps>(
                     </Text>
                     <b>{names[1]}</b>
                     <Text as="span" size="Inherit" priority="300">
-                      {' are following the conversation.'}
+                      {' 正在关注会话'}
                     </Text>
                   </>
                 )}
@@ -111,7 +111,7 @@ export const RoomViewFollowing = as<'div', RoomViewFollowingProps>(
                     </Text>
                     <b>{names[2]}</b>
                     <Text as="span" size="Inherit" priority="300">
-                      {' are following the conversation.'}
+                      {' 正在关注会话'}
                     </Text>
                   </>
                 )}
@@ -131,7 +131,7 @@ export const RoomViewFollowing = as<'div', RoomViewFollowingProps>(
                     </Text>
                     <b>{names.length - 3} others</b>
                     <Text as="span" size="Inherit" priority="300">
-                      {' are following the conversation.'}
+                      {' 正在关注会话'}
                     </Text>
                   </>
                 )}
