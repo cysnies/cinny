@@ -273,7 +273,7 @@ export function Home() {
                       </Avatar>
                       <Box as="span" grow="Yes">
                         <Text as="span" size="Inherit" truncate>
-                          消息搜索
+                          搜索消息
                         </Text>
                       </Box>
                     </Box>
