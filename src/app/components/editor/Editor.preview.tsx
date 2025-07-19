@@ -40,7 +40,7 @@ export function EditorPreview() {
               <div style={{ padding: config.space.S400 }}>
                 <CustomEditor
                   editor={editor}
-                  placeholder="Send a message..."
+                  placeholder="发送一条消息..."
                   before={
                     <IconButton variant="SurfaceVariant" size="300" radii="300">
                       <Icon src={Icons.PlusCircle} />
