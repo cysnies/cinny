@@ -94,7 +94,7 @@ export function RoomEncryption({ powerLevels }: RoomEncryptionProps) {
               onClick={() => setPrompt(true)}
               before={enabling && <Spinner size="100" variant="Primary" fill="Solid" />}
             >
-              <Text size="B300">Enable</Text>
+              <Text size="B300">启用</Text>
             </Button>
           )
         }
