@@ -17,10 +17,10 @@ function RoomTile({ avatarSrc, name, id, inviterName, memberCount, desc, options
         <Text variant="s1">{name}</Text>
         <Text variant="b3">
           {inviterName !== null
-            ? `Invited by ${inviterName} to ${id}${
-                memberCount === null ? '' : ` • ${memberCount} members`
+            ? `被 ${inviterName} 邀请加入 ${id}${
+                memberCount === null ? '' : ` • ${memberCount} 位成员`
               }`
-            : id + (memberCount === null ? '' : ` • ${memberCount} members`)}
+            : id + (memberCount === null ? '' : ` • ${memberCount} 位成员`)}
         </Text>
         {desc !== null && typeof desc === 'string' ? (
           <Text className="room-tile__content__desc" variant="b2">

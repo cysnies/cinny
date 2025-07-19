@@ -233,7 +233,7 @@ function CreateRoomContent({ isSpace, parentId, onRequestClose }) {
         {isCreatingRoom && (
           <div className="create-room__loading">
             <Spinner size="small" />
-            <Text>{`Creating ${isSpace ? 'space' : 'room'}...`}</Text>
+            <Text>{`正在创建 ${isSpace ? '频道' : '房间'}...`}</Text>
           </div>
         )}
         {typeof creatingError === 'string' && (

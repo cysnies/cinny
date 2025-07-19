@@ -180,7 +180,7 @@ function InviteUser({ isOpen, roomId, searchTerm, onRequestClose }) {
         );
       }
       if (invitedUserIds.has(userId)) {
-        return messageJSX('Invited', true);
+        return messageJSX('已邀请', true);
       }
       if (typeof roomId === 'string') {
         const member = mx.getRoom(roomId).getMember(userId);
@@ -188,11 +188,11 @@ function InviteUser({ isOpen, roomId, searchTerm, onRequestClose }) {
           const userMembership = member.membership;
           switch (userMembership) {
             case 'join':
-              return messageJSX('Already joined', true);
+              return messageJSX('已经加入', true);
             case 'invite':
-              return messageJSX('Already Invited', true);
+              return messageJSX('已被邀请', true);
             case 'ban':
-              return messageJSX('Banned', false);
+              return messageJSX('已被封禁', false);
             default:
           }
         }
@@ -261,7 +261,7 @@ function InviteUser({ isOpen, roomId, searchTerm, onRequestClose }) {
   return (
     <PopupWindow
       isOpen={isOpen}
-      title={typeof roomId === 'string' ? `Invite to ${mx.getRoom(roomId).name}` : '私聊消息'}
+      title={typeof roomId === 'string' ? `邀请到 ${mx.getRoom(roomId).name}` : '私聊消息'}
       contentOptions={<IconButton src={CrossIC} onClick={onRequestClose} tooltip="关闭" />}
       onRequestClose={onRequestClose}
     >
