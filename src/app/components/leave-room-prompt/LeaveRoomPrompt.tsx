@@ -74,10 +74,10 @@ export function LeaveRoomPrompt({ roomId, onDone, onCancel }: LeaveRoomPromptPro
             </Header>
             <Box style={{ padding: config.space.S400 }} direction="Column" gap="400">
               <Box direction="Column" gap="200">
-                <Text priority="400">Are you sure you want to leave this room?</Text>
+                <Text priority="400">你确定要离开这个房间吗？</Text>
                 {leaveState.status === AsyncStatus.Error && (
                   <Text style={{ color: color.Critical.Main }} size="T300">
-                    Failed to leave room! {leaveState.error.message}
+                    离开房间失败： {leaveState.error.message}
                   </Text>
                 )}
               </Box>
@@ -96,7 +96,7 @@ export function LeaveRoomPrompt({ roomId, onDone, onCancel }: LeaveRoomPromptPro
                 }
               >
                 <Text size="B400">
-                  {leaveState.status === AsyncStatus.Loading ? 'Leaving...' : 'Leave'}
+                  {leaveState.status === AsyncStatus.Loading ? '离开中...' : '离开'}
                 </Text>
               </Button>
             </Box>
