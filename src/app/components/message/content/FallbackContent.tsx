@@ -61,6 +61,6 @@ export const MessageEmptyContent = as<'div', { children?: never }>(({ ...props }
 
 export const MessageEditedContent = as<'span', { children?: never }>(({ ...props }, ref) => (
   <Text as="span" size="T200" priority="300" {...props} ref={ref}>
-    {' (edited)'}
+    {' （已编辑）'}
   </Text>
 ));

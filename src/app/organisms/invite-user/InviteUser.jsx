@@ -282,7 +282,7 @@ function InviteUser({ isOpen, roomId, searchTerm, onRequestClose }) {
           {typeof searchQuery.username !== 'undefined' && isSearching && (
             <div className="flex--center">
               <Spinner size="small" />
-              <Text variant="b2">{`Searching for user "${searchQuery.username}"...`}</Text>
+              <Text variant="b2">{`正在搜索用户 "${searchQuery.username}"...`}</Text>
             </div>
           )}
           {typeof searchQuery.username !== 'undefined' && !isSearching && (
