@@ -238,7 +238,7 @@ export function DeviceDeleteBtn({
       onClick={() => onDeleteToggle(deviceId)}
       disabled={disabled}
     >
-      <Text size="B300">Undo</Text>
+      <Text size="B300">撤销</Text>
     </Chip>
   ) : (
     <Chip
