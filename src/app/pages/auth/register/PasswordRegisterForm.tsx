@@ -299,7 +299,7 @@ export function PasswordRegisterForm({
                   <FieldError
                     message={
                       registerError.data.error ??
-                      '密码被服务器拒绝：密码太简单，请选择更复杂的密码。'
+                      '密码被服务器拒绝：密码太简单，请使用更复杂的密码。'
                     }
                   />
                 )}
@@ -307,7 +307,7 @@ export function PasswordRegisterForm({
                   <FieldError
                     message={
                       registerError.data.error ??
-                      '密码被服务器拒绝：密码太短，请选择更长的密码。'
+                      '密码被服务器拒绝：密码太短，请使用更长的密码。'
                     }
                   />
                 )}
