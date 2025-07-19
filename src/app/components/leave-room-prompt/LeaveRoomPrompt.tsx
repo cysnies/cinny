@@ -66,7 +66,7 @@ export function LeaveRoomPrompt({ roomId, onDone, onCancel }: LeaveRoomPromptPro
               size="500"
             >
               <Box grow="Yes">
-                <Text size="H4">Leave Room</Text>
+                <Text size="H4">离开房间</Text>
               </Box>
               <IconButton size="300" onClick={onCancel} radii="300">
                 <Icon src={Icons.Cross} />
