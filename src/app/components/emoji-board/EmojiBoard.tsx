@@ -342,7 +342,7 @@ function RecentEmojiSidebarStack({ onItemClick }: { onItemClick: (id: string) =>
       <SidebarBtn
         active={activeGroupId === RECENT_GROUP_ID}
         id={RECENT_GROUP_ID}
-        label="Recent"
+        label="最近"
         onItemClick={() => onItemClick(RECENT_GROUP_ID)}
       >
         <Icon src={Icons.RecentClock} filled={activeGroupId === RECENT_GROUP_ID} />
