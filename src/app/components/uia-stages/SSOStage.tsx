@@ -81,7 +81,7 @@ export function SSOStage({
         ) : (
           <Button variant="Primary" onClick={handleContinue}>
             <Text as="span" size="B400">
-              使用 SSO 继续
+              使用 Redrock SSO 继续
             </Text>
           </Button>
         )}
