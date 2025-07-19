@@ -224,7 +224,7 @@ function SpaceAddExisting() {
           {room && room.name}
           <span style={{ color: 'var(--tc-surface-low)' }}>
             {' '}
-            — 添加已存在的 {data?.spaces ? '频道' : '房间'}
+            — 添加已存在的{data?.spaces ? '频道' : '房间'}
           </span>
         </Text>
       }

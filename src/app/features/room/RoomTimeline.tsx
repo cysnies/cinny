@@ -1381,7 +1381,7 @@ export function RoomTimeline({
                 <Box grow="Yes" direction="Column">
                   <Text size="T300" priority="300">
                     <b>{senderName}</b>
-                    {' changed room topic'}
+                    {' 修改了房间话题'}
                   </Text>
                 </Box>
               }
@@ -1419,7 +1419,7 @@ export function RoomTimeline({
                 <Box grow="Yes" direction="Column">
                   <Text size="T300" priority="300">
                     <b>{senderName}</b>
-                    {' changed room avatar'}
+                    {' 修改了房间头像'}
                   </Text>
                 </Box>
               }
