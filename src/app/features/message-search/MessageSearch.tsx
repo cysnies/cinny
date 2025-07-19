@@ -242,7 +242,7 @@ export function MessageSearch({
         >
           <Icon size="200" src={Icons.Info} />
           <Text>
-            No results found for <b>{`"${msgSearchParams.term}"`}</b>
+            未找到关于 <b>{`"${msgSearchParams.term}"`}</b> 的结果。
           </Text>
         </Box>
       )}
