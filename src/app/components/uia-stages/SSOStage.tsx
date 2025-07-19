@@ -49,7 +49,7 @@ export function SSOStage({
         size="500"
       >
         <Box grow="Yes">
-          <Text size="H4">SSO Login</Text>
+          <Text size="H4">SSO 登录</Text>
         </Box>
         <IconButton size="300" onClick={onCancel} radii="300">
           <Icon src={Icons.Cross} />

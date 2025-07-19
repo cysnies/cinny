@@ -200,7 +200,7 @@ export function PasswordLoginForm({ defaultUsername, defaultEmail }: PasswordLog
     <Box as="form" onSubmit={handleSubmit} direction="Inherit" gap="400">
       <Box direction="Column" gap="100">
         <Text as="label" size="L400" priority="300">
-          Username
+          用户名
         </Text>
         <Input
           defaultValue={defaultUsername ?? defaultEmail}
@@ -225,7 +225,7 @@ export function PasswordLoginForm({ defaultUsername, defaultEmail }: PasswordLog
       </Box>
       <Box direction="Column" gap="100">
         <Text as="label" size="L400" priority="300">
-          Password
+          密码
         </Text>
         <PasswordInput name="passwordInput" variant="Background" size="500" outlined required />
         <Box alignItems="Start" justifyContent="SpaceBetween" gap="200">
@@ -250,14 +250,14 @@ export function PasswordLoginForm({ defaultUsername, defaultEmail }: PasswordLog
           )}
           <Box grow="Yes" shrink="No" justifyContent="End">
             <Text as="span" size="T200" priority="400" align="Right">
-              <Link to={getResetPasswordPath(server)}>Forget Password?</Link>
+              <Link to={getResetPasswordPath(server)}>忘记密码？</Link>
             </Text>
           </Box>
         </Box>
       </Box>
       <Button type="submit" variant="Primary" size="500">
         <Text as="span" size="B500">
-          Login
+          登录
         </Text>
       </Button>
 
