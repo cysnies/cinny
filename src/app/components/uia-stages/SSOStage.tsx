@@ -81,7 +81,7 @@ export function SSOStage({
         ) : (
           <Button variant="Primary" onClick={handleContinue}>
             <Text as="span" size="B400">
-              Continue with SSO
+              使用 SSO 继续
             </Text>
           </Button>
         )}
