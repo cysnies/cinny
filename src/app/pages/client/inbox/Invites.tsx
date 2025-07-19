@@ -114,8 +114,8 @@ const makeInviteData = (mx: MatrixClient, room: Room, useAuthentication: boolean
     roomTopic,
     roomAlias: room.getCanonicalAlias() ?? undefined,
 
-    senderId: senderId ?? 'Unknown',
-    senderName: senderName ?? 'Unknown',
+    senderId: senderId ?? '未知',
+    senderName: senderName ?? '未知',
     inviteTs,
 
     isSpace: isSpace(room),

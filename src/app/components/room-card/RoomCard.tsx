@@ -295,7 +295,7 @@ export const RoomCard = as<'div', RoomCardProps>(
             </Button>
             <ErrorDialog
               title="Join Error"
-              message={joinState.error.message || 'Failed to join. Unknown Error.'}
+              message={joinState.error.message || '加入失败。未知错误。'}
             >
               {(openError) => (
                 <Button

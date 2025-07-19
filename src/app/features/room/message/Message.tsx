@@ -290,7 +290,7 @@ export const MessageSourceCodeItem = as<
           >
             <Modal variant="Surface" size="500">
               <TextViewer
-                name="Source Code"
+                name="源代码"
                 langName="json"
                 text={getText()}
                 requestClose={handleClose}
@@ -385,7 +385,7 @@ export const MessagePinItem = as<
       ref={ref}
     >
       <Text className={css.MessageMenuItemText} as="span" size="T300" truncate>
-        {isPinned ? 'Unpin Message' : 'Pin Message'}
+        {isPinned ? '取消置顶消息' : '置顶消息'}
       </Text>
     </MenuItem>
   );
@@ -493,7 +493,7 @@ export const MessageDeleteItem = as<
                   aria-disabled={deleteState.status === AsyncStatus.Loading}
                 >
                   <Text size="B400">
-                    {deleteState.status === AsyncStatus.Loading ? 'Deleting...' : 'Delete'}
+                    {deleteState.status === AsyncStatus.Loading ? '删除中...' : '删除'}
                   </Text>
                 </Button>
               </Box>
@@ -513,7 +513,7 @@ export const MessageDeleteItem = as<
         ref={ref}
       >
         <Text className={css.MessageMenuItemText} as="span" size="T300" truncate>
-          Delete
+          删除
         </Text>
       </Button>
     </>

@@ -216,7 +216,7 @@ function MessageNotifications() {
         const avatarMxc =
           room.getAvatarFallbackMember()?.getMxcAvatarUrl() ?? room.getMxcAvatarUrl();
         notify({
-          roomName: room.name ?? 'Unknown',
+          roomName: room.name ?? '未知',
           roomAvatar: avatarMxc
             ? mxcUrlToHttp(mx, avatarMxc, useAuthentication, 96, 96, 'crop') ?? undefined
             : undefined,

@@ -98,7 +98,7 @@ const getInlineNonMarkElement = (node: Element): MentionElement | EmoticonElemen
   if (node.name === 'img' && node.attribs['data-mx-emoticon'] !== undefined) {
     const { src, alt } = node.attribs;
     if (!src) return undefined;
-    return createEmoticonElement(src, alt || 'Unknown Emoji');
+    return createEmoticonElement(src, alt || '未知的 Emoji');
   }
   if (node.name === 'a') {
     const href = tryDecodeURIComponent(node.attribs.href);

@@ -144,7 +144,7 @@ export function AudioContent({
             )
           }
         >
-          <Text size="B300">{playing ? 'Pause' : 'Play'}</Text>
+          <Text size="B300">{playing ? '暂停' : '播放'}</Text>
         </Chip>
 
         <Text size="T200">{`${secondsToMinutesAndSeconds(

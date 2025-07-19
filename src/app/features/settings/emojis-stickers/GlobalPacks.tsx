@@ -360,7 +360,7 @@ export function GlobalPacks({ onViewPack }: GlobalPacksProps) {
         <SettingTile
           title={
             <span style={{ textDecoration: removed ? 'line-through' : undefined }}>
-              {pack.meta.name ?? 'Unknown'}
+              {pack.meta.name ?? '未知'}
             </span>
           }
           description={<span className={LineClamp2}>{pack.meta.attribution}</span>}

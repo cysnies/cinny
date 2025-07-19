@@ -376,7 +376,7 @@ function ImagePackSidebarStack({
             active={activeGroupId === pack.id}
             key={pack.id}
             id={pack.id}
-            label={label || 'Unknown Pack'}
+            label={label || '未知表情包'}
             onItemClick={onItemClick}
           >
             <img
@@ -389,7 +389,7 @@ function ImagePackSidebarStack({
                 mxcUrlToHttp(mx, pack.getAvatarUrl(usage) ?? '', useAuthentication) ||
                 pack.meta.avatar
               }
-              alt={label || 'Unknown Pack'}
+              alt={label || '未知表情包'}
             />
           </SidebarBtn>
         );
@@ -534,7 +534,7 @@ export const CustomEmojiGroups = memo(
   }) => (
     <>
       {groups.map((pack) => (
-        <EmojiGroup key={pack.id} id={pack.id} label={pack.meta.name || 'Unknown'}>
+        <EmojiGroup key={pack.id} id={pack.id} label={pack.meta.name || '未知'}>
           {pack
             .getImages(ImageUsage.Emoticon)
             .sort((a, b) => a.shortcode.localeCompare(b.shortcode))
@@ -589,7 +589,7 @@ export const StickerGroups = memo(
         </Box>
       )}
       {groups.map((pack) => (
-        <EmojiGroup key={pack.id} id={pack.id} label={pack.meta.name || 'Unknown'}>
+        <EmojiGroup key={pack.id} id={pack.id} label={pack.meta.name || '未知'}>
           {pack
             .getImages(ImageUsage.Sticker)
             .sort((a, b) => a.shortcode.localeCompare(b.shortcode))

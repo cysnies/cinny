@@ -86,7 +86,7 @@ export function RoomMentionAutocomplete({
     useCallback(
       (rId) => {
         const r = mx.getRoom(rId);
-        if (!r) return 'Unknown Room';
+        if (!r) return '未知的房间。';
         const alias = r.getCanonicalAlias();
         if (alias) return [r.name, alias];
         return r.name;
