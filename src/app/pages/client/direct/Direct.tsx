@@ -155,7 +155,7 @@ function DirectEmpty() {
         options={
           <Button variant="Secondary" size="300" onClick={() => openInviteUser()}>
             <Text size="B300" truncate>
-              私聊消息
+              发起私聊
             </Text>
           </Button>
         }
